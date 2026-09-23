@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası · Dini Merasim</title>
+<meta name="description" content="Dini Merasim uygulamasının gizlilik politikası: hangi veriler işlenir, nerede saklanır, nasıl silinir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F3EFE6;
+    --surface: #FFFCF6;
+    --text: #252925;
+    --muted: #62675F;
+    --accent: #36594B;
+    --on-accent: #FFFCF6;
+    --hairline: #8B806A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #191D1A;
+      --surface: #242A25;
+      --text: #F2EEE5;
+      --muted: #B1B8AE;
+      --accent: #AAC4B2;
+      --on-accent: #191D1A;
+      --hairline: #4A544C;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 64px; }
+  header { margin-bottom: 32px; }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 8px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400; font-size: 44px; line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 16px;
+  }
+  h2 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400; font-size: 24px; line-height: 1.3;
+    margin: 48px 0 8px; padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+  }
+  h3 { font-size: 17px; font-weight: 600; margin: 24px 0 4px; }
+  p, li { margin: 0 0 16px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  .meta { color: var(--muted); font-size: 15px; margin-bottom: 0; }
+  .lede { font-size: 19px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 24px 0;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 16px; }
+  th, td { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
+  th { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .tag {
+    display: inline-block; font-size: 13px; font-weight: 600;
+    padding: 2px 8px; border-radius: 8px;
+    background: var(--accent); color: var(--on-accent);
+  }
+  footer {
+    margin-top: 48px; padding-top: 24px;
+    border-top: 1px solid var(--hairline);
+    color: var(--muted); font-size: 15px;
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 32px 16px 48px; }
+    h1 { font-size: 34px; }
+    table, th, td { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Dini Merasim</p>
+  <h1>Gizlilik Politikası</h1>
+  <p class="meta">Yürürlük tarihi: 23 Eylül 2026 · Sürüm 2.24.0</p>
+</header>
+
+<p class="lede">Dini Merasim, vefat eden yakınlarınızın anısına dini merasim düzenlemenizi, dua etmenizi ve anılarını yaşatmanızı sağlar. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
+
+<div class="card">
+  <h3 style="margin-top:0">Kısa özet</h3>
+  <ul>
+    <li><strong>Konumunuz cihazınızdan çıkmaz.</strong> Yalnızca namaz vakti ve kıble hesabı için okunur, hiçbir sunucuya gönderilmez ve kaydedilmez.</li>
+    <li><strong>Fotoğraflarınız cihazınızda kalır.</strong> Yakınlarınız için seçtiğiniz görseller cihazın kendi depolamasına yazılır, sunucuya yüklenmez.</li>
+    <li><strong>Hesabınızı uygulama içinden tamamen silebilirsiniz.</strong></li>
+    <li>Verilerinizi reklam amacıyla satmıyoruz.</li>
+  </ul>
+</div>
+
+<h2>1. İşlediğimiz veriler</h2>
+
+<table>
+  <thead>
+    <tr><th>Veri</th><th>Neden</th><th>Nerede</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>E-posta adresi, ad, giriş sağlayıcısı</td>
+      <td>Hesap oluşturma ve oturum açma</td>
+      <td>Supabase (sunucu)</td>
+    </tr>
+    <tr>
+      <td>Yakın kayıtları: ad, yakınlık türü, vefat tarihi</td>
+      <td>Anma ve merasim düzenleme</td>
+      <td>Supabase + cihazda kopya</td>
+    </tr>
+    <tr>
+      <td>Merasim kayıtları: tür, tarih, program, katılımcılar</td>
+      <td>Merasim düzenleme ve canlı takip</td>
+      <td>Supabase + cihazda kopya</td>
+    </tr>
+    <tr>
+      <td>Topluluk paylaşımları, dua ve zikir halkası kayıtları, tepkiler</td>
+      <td>Topluluk özellikleri</td>
+      <td>Supabase</td>
+    </tr>
+    <tr>
+      <td>Takip ilişkileri</td>
+      <td>Yakınlarınızı takip eden kişileri göstermek</td>
+      <td>Supabase</td>
+    </tr>
+    <tr>
+      <td>Kaza namaz ve oruç sayaçları</td>
+      <td>İbadet takibi</td>
+      <td>Cihazda, isteğe bağlı olarak Supabase</td>
+    </tr>
+    <tr>
+      <td>Yakın fotoğrafları</td>
+      <td>Anma kaydını kişiselleştirmek</td>
+      <td><span class="tag">Yalnızca cihazda</span></td>
+    </tr>
+    <tr>
+      <td>Konum (enlem, boylam)</td>
+      <td>Namaz vakti ve kıble hesabı</td>
+      <td><span class="tag">Yalnızca cihazda</span></td>
+    </tr>
+    <tr>
+      <td>Uygulama tercihleri (tema, dil, bildirim ayarları)</td>
+      <td>Tercihlerinizi hatırlamak</td>
+      <td>Yalnızca cihazda</td>
+    </tr>
+    <tr>
+      <td>Çökme ve hata kayıtları</td>
+      <td>Uygulamayı düzeltmek</td>
+      <td>Sentry</td>
+    </tr>
+    <tr>
+      <td>Reklam tanımlayıcısı</td>
+      <td>Reklam gösterimi</td>
+      <td>Google AdMob</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>2. Cihazınızdan çıkmayan veriler</h2>
+
+<h3>Konum</h3>
+<p>Uygulama konum iznini yalnızca üç yerde kullanır: namaz vakitleri ekranı, kıble bulucu ve Ramazan bölümü. Enlem ve boylam cihazda okunur, hesaplama cihazda yapılır ve sonuç ekranda gösterilir. Konum bilgisi hiçbir sunucuya gönderilmez, veritabanına yazılmaz ve üçüncü taraflarla paylaşılmaz. Konum iznini vermezseniz vakitleri elle şehir seçerek de kullanabilirsiniz.</p>
+
+<h3>Fotoğraflar</h3>
+<p>Bir yakınınız için kamera veya galeriden fotoğraf seçtiğinizde, görsel cihazınızın uygulama dizinine kaydedilir. Sunucuya yalnızca bu dosyanın cihazınızdaki yolu kaydedilir, görselin kendisi yüklenmez. Bu nedenle fotoğraflarınız başka bir cihaza senkronize olmaz ve uygulamayı sildiğinizde cihazdan da silinir.</p>
+
+<h2>3. Üçüncü taraf hizmetler</h2>
+
+<h3>Supabase</h3>
+<p>Hesabınız ve oluşturduğunuz içerik Supabase altyapısında saklanır. Erişim, satır düzeyi güvenlik politikalarıyla sınırlandırılmıştır.</p>
+
+<h3>Giriş sağlayıcıları</h3>
+<p>Google, Apple veya Facebook ile giriş yapmayı seçerseniz, ilgili sağlayıcı bize kimliğinizi doğrulamak için e-posta adresinizi ve adınızı iletir. Şifrenizi hiçbir zaman görmeyiz.</p>
+
+<h3>Sentry (çökme raporlama)</h3>
+<p>Uygulama beklenmedik şekilde kapandığında teknik bir rapor gönderilir. Bu raporlarda IP adresiniz, cihaz kimliğiniz ve kullanıcı bilgileriniz <strong>bilerek kapatılmıştır</strong>. Rapor içeriği gönderilmeden önce kişisel veri temizleme sürecinden geçirilir.</p>
+
+<h3>Google AdMob</h3>
+<p>Uygulama reklam gösterir. AdMob, reklam sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Google'ın veri işleme uygulamaları için <a href="https://policies.google.com/technologies/partner-sites">Google Gizlilik Politikası</a> geçerlidir. iOS'ta uygulama izleme izni istemediğimiz için size kişiselleştirilmemiş reklam gösterilir.</p>
+
+<h2>4. Çocuklar</h2>
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan veri toplamayız. Çocuğunuza ait bir veri işlediğimizi düşünüyorsanız bize yazın, silelim.</p>
+
+<h2>5. Saklama ve silme</h2>
+<p>Verileriniz hesabınız açık kaldığı sürece saklanır.</p>
+<p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın kayıtlarınız, merasimleriniz ve topluluk paylaşımlarınız sunucudan kaldırılır. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
+<p>Uygulama içinden silemiyorsanız aşağıdaki adrese yazın, talebinizi en geç 30 gün içinde sonuçlandırırız.</p>
+
+<h2>6. Haklarınız</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında; verilerinize erişme, düzeltilmesini isteme, silinmesini isteme, işlenmesine itiraz etme ve verilerinizin bir kopyasını talep etme haklarına sahipsiniz. Bu haklarınızı kullanmak için aşağıdaki adrese yazabilirsiniz.</p>
+
+<h2>7. Değişiklikler</h2>
+<p>Bu politikayı güncellersek bu sayfadaki yürürlük tarihini değiştiririz. Önemli değişikliklerde uygulama içinde bilgilendirme yaparız.</p>
+
+<h2>8. İletişim</h2>
+<p>Gizlilikle ilgili her konuda bize ulaşabilirsiniz:</p>
+<p><a href="mailto:dinimerasimler@gmail.com">dinimerasimler@gmail.com</a></p>
+
+<footer>
+  <p>Dini Merasim · <a href="./terms-of-use.html">Kullanım Şartları</a> · <a href="./">Ana sayfa</a></p>
+</footer>
+
+</div>
+</body>
+</html>

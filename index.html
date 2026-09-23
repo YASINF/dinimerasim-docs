@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dini Merasim</title>
+<meta name="description" content="Sevdiklerinizin anısına dini merasim düzenleyin. Dini Merasim mobil uygulaması.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F3EFE6; --surface: #FFFCF6; --text: #252925;
+    --muted: #62675F; --accent: #36594B; --on-accent: #FFFCF6; --hairline: #8B806A;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #191D1A; --surface: #242A25; --text: #F2EEE5;
+      --muted: #B1B8AE; --accent: #AAC4B2; --on-accent: #191D1A; --hairline: #4A544C;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: "Source Sans 3", system-ui, sans-serif;
+    font-size: 17px; line-height: 1.55;
+    min-height: 100vh; display: flex; align-items: center;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 48px 24px; width: 100%; }
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); margin: 0 0 8px;
+  }
+  h1 {
+    font-family: "Source Serif 4", Georgia, serif;
+    font-weight: 400; font-size: 44px; line-height: 1.15;
+    letter-spacing: -0.01em; margin: 0 0 16px;
+  }
+  .lede { font-size: 19px; color: var(--muted); margin: 0 0 32px; }
+  hr { border: 0; border-top: 1px solid var(--hairline); margin: 32px 0; }
+  nav a {
+    display: block; padding: 16px 0;
+    border-bottom: 1px solid var(--hairline);
+    color: var(--text); text-decoration: none; font-weight: 600;
+  }
+  nav a:first-of-type { border-top: 1px solid var(--hairline); }
+  nav a:hover, nav a:focus-visible { color: var(--accent); }
+  nav a span { display: block; font-weight: 400; font-size: 15px; color: var(--muted); }
+  footer { margin-top: 32px; color: var(--muted); font-size: 15px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 32px 16px; }
+    h1 { font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Mobil uygulama</p>
+  <h1>Dini Merasim</h1>
+  <p class="lede">Sevdiklerinizin anısına dini merasim düzenleyin, dua edin, anılarını yaşatın.</p>
+
+  <nav>
+    <a href="./privacy-policy.html">
+      Gizlilik Politikası
+      <span>Hangi veriler işlenir, nerede saklanır, nasıl silinir</span>
+    </a>
+    <a href="./terms-of-use.html">
+      Kullanım Şartları
+      <span>Hesap, içerik kuralları ve sorumluluklar</span>
+    </a>
+  </nav>
+
+  <footer>
+    <p>İletişim: <a href="mailto:dinimerasimler@gmail.com" style="color:var(--accent)">dinimerasimler@gmail.com</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
