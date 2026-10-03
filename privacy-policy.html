@@ -97,15 +97,15 @@
 <header>
   <p class="eyebrow">Dini Merasim</p>
   <h1>Gizlilik Politikası</h1>
-  <p class="meta">Yürürlük tarihi: 23 Eylül 2026 (güncellendi) · Sürüm 2.24.0</p>
+  <p class="meta">Yürürlük tarihi: 3 Ekim 2026 (güncellendi) · Sürüm 2.28.0</p>
 </header>
 
-<p class="lede">Dini Merasim, vefat eden yakınlarınızın anısına dini merasim düzenlemenizi, dua etmenizi ve anılarını yaşatmanızı sağlar. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
+<p class="lede">Dini Merasim; vefat eden sevdiklerinizi anmanıza, doğum günlerini dua ve şükürle kutlamanıza, hayırlı günleriniz için merasim düzenlemenize ve yakınlarınızla birlikte Kur’an okuyup dua etmenize yardımcı olur. Zikir halkaları, namaz vakitleri ve hatırlatmalarla günlük ibadetlerinize eşlik eder. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
 
 <div class="card">
   <h3 style="margin-top:0">Kısa özet</h3>
   <ul>
-    <li><strong>Konumunuz cihazınızdan çıkmaz.</strong> Yalnızca namaz vakti ve kıble hesabı için okunur, hiçbir sunucuya gönderilmez ve kaydedilmez.</li>
+    <li><strong>Konum kullanımını siz seçersiniz.</strong> Namaz vakti ve kıble hesabı cihazda yapılır. Şehrinizi bulmak için konumunuz telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) sorulur. "En yakın cami" ve "Yakındaki kutsal mekânlar" listeleri uygulamanın içindeki cami ve kutsal mekân listesinden cihazda hesaplanır; konumunuz gönderilmez. Yalnızca yurt dışında (cihazdaki listede 20 km içinde cami yoksa) 100 metreye yuvarlanmış konumunuz (Google Play tanımında kesin konum) çevredeki camileri bulmak için OpenStreetMap sunucusuna gider. Adresler için camilerin ve kutsal mekânların konumu telefonunuzun adres hizmetine gönderilir.</li>
     <li><strong>Fotoğraflarınız cihazınızda kalır.</strong> Yakınlarınız için seçtiğiniz görseller cihazın kendi depolamasına yazılır, sunucuya yüklenmez.</li>
     <li><strong>Hesabınızı uygulama içinden tamamen silebilirsiniz.</strong></li>
     <li>Verilerinizi reklam amacıyla satmıyoruz.</li>
@@ -125,7 +125,7 @@
       <td>Supabase (sunucu)</td>
     </tr>
     <tr>
-      <td>Yakın kayıtları: ad, yakınlık türü, vefat tarihi</td>
+      <td>Yakın kayıtları: ad, yakınlık türü, doğum ve varsa vefat tarihi</td>
       <td>Anma ve merasim düzenleme</td>
       <td>Supabase + cihazda kopya</td>
     </tr>
@@ -145,6 +145,16 @@
       <td>Supabase</td>
     </tr>
     <tr>
+      <td>Birlikte Kur'an okuma: okunan yer (sure, âyet, sayfa, ses konumu), davet ettiğiniz kişiler ve katılım durumları</td>
+      <td>Takip listenizdeki kişilerle aynı yerden birlikte okumak</td>
+      <td>Supabase; oturum en geç 24 saat sonra silinir</td>
+    </tr>
+    <tr>
+      <td>Kur'an okurken kaldığınız yer ve okuyucu ayarları</td>
+      <td>Kaldığınız yerden devam etmek ve akşam hatırlatması</td>
+      <td><span class="tag">Yalnızca cihazda</span></td>
+    </tr>
+    <tr>
       <td>Kaza namaz ve oruç sayaçları</td>
       <td>İbadet takibi</td>
       <td>Cihazda, isteğe bağlı olarak Supabase</td>
@@ -156,8 +166,18 @@
     </tr>
     <tr>
       <td>Konum (enlem, boylam)</td>
-      <td>Namaz vakti ve kıble hesabı</td>
-      <td><span class="tag">Yalnızca cihazda</span></td>
+      <td>Namaz vakti ve kıble hesabı, en yakın camilerin ve kutsal mekânların mesafesi; namaz vakitleri ve Ramazan için şehrinizi bulmak</td>
+      <td>Hesaplama cihazda; şehir adı için telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) sorulur, uygulama tarafından saklanmaz</td>
+    </tr>
+    <tr>
+      <td>100 metreye yuvarlanmış konum (Google Play tanımında kesin konum)</td>
+      <td>En yakın camileri listelemek; yalnızca yurt dışında, cihazdaki listede 20 km içinde cami yoksa ve siz "En yakın cami"yi açtığınızda</td>
+      <td>OpenStreetMap (Overpass) sunucusuna gönderilir, sunucularımızda saklanmaz; yuvarlanmış konum ve sonuç listesi 7 gün yalnızca cihazda tutulur</td>
+    </tr>
+    <tr>
+      <td>Yakındaki camilerin ve kutsal mekânların konumu</td>
+      <td>Adresini göstermek (listede adres yoksa)</td>
+      <td>Telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) gönderilir; bulunan adresler 30 gün cihazda tutulur</td>
     </tr>
     <tr>
       <td>Uygulama tercihleri (tema, dil, bildirim ayarları)</td>
@@ -177,10 +197,11 @@
   </tbody>
 </table>
 
-<h2>2. Cihazınızdan çıkmayan veriler</h2>
+<h2>2. Konum ve cihazda saklanan veriler</h2>
 
 <h3>Konum</h3>
-<p>Uygulama konum iznini yalnızca üç yerde kullanır: namaz vakitleri ekranı, kıble bulucu ve Ramazan bölümü. Enlem ve boylam cihazda okunur, hesaplama cihazda yapılır ve sonuç ekranda gösterilir. Konum bilgisi hiçbir sunucuya gönderilmez, veritabanına yazılmaz ve üçüncü taraflarla paylaşılmaz. Konum iznini vermezseniz vakitleri elle şehir seçerek de kullanabilirsiniz.</p>
+<p>Uygulama konum iznini beş yerde kullanır: namaz vakitleri ekranı, kıble bulucu, Ramazan bölümü, en yakın cami ve yakındaki kutsal mekânlar. Enlem ve boylam cihazda okunur ve veritabanımıza hiçbir zaman yazılmaz. Namaz vakti, kıble ve Ramazan için hesaplama cihazda yapılır. Namaz vakitleri ekranı ve Ramazan bölümü şehrinizi bulmak için konumunuzu telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) sorar; bu istek hesabınızla ilişkilendirilmez ve uygulama tarafından saklanmaz. Konum iznini vermezseniz vakitleri elle şehir seçerek de kullanabilirsiniz.</p>
+<p>En yakın cami ve yakındaki kutsal mekânlar listeleri, uygulamayla gelen Türkiye cami ve kutsal mekân listesinden cihazınızda hesaplanır; konumunuz gönderilmez. Uygulama bu listedeki değişiklikleri zaman zaman sunucumuzdan (Supabase) indirir; bu istek konumunuzu içermez. Yalnızca yurt dışında, cihazdaki listede 20 km içinde cami yoksa, konumunuz yaklaşık 100 metreye yuvarlanır ve çevredeki camileri bulmak için OpenStreetMap'in Overpass sunucusuna gönderilir. Bu istek hesabınızla ilişkilendirilmez; Bu hassasiyet Google Play Veri Güvenliği tanımında kesin konum sayılır; mesafeler cihazda hesaplanır. Yuvarlanmış konum ve bulunan liste yalnızca cihazınızda 7 gün saklanır. Bir yerin adresi listede yoksa telefonunuzun adres hizmeti adresi o yerin konumundan bulur; bu istekte sizin konumunuz değil, caminin ya da kutsal mekânın konumu gider. Bulunan adresler cihazınızda 30 gün saklanır. iPhone'da yaklaşık konum izni verdiyseniz uygulama listeyi açarken o kullanım için tam konum ister; vermezseniz liste yaklaşık konumla sıralanır. İzin vermezseniz "Haritada ara" ile telefonunuzun harita uygulamasında arama yapabilirsiniz.</p>
 
 <h3>Fotoğraflar</h3>
 <p>Bir yakınınız için kamera veya galeriden fotoğraf seçtiğinizde, görsel cihazınızın uygulama dizinine kaydedilir. Sunucuya yalnızca bu dosyanın cihazınızdaki yolu kaydedilir, görselin kendisi yüklenmez. Bu nedenle fotoğraflarınız başka bir cihaza senkronize olmaz ve uygulamayı sildiğinizde cihazdan da silinir.</p>
@@ -191,21 +212,32 @@
 <p>Hesabınız ve oluşturduğunuz içerik Supabase altyapısında saklanır. Erişim, satır düzeyi güvenlik politikalarıyla sınırlandırılmıştır.</p>
 
 <h3>Google ile giriş</h3>
-<p>Google ile giriş yapmayı seçerseniz Google, kimliğinizi doğrulamak için bize e-posta adresinizi ve adınızı iletir. Şifrenizi hiçbir zaman görmeyiz. E-posta ve şifreyle de hesap açabilirsiniz; bu durumda Google devreye girmez.</p>
+<p>Google ile giriş yapmayı seçerseniz Google, kimliğinizi doğrulamak için bize e-posta adresinizi ve adınızı iletir. Şifrenizi hiçbir zaman görmeyiz. Bu sürümde hesap açma ve giriş Google hesabıyla yapılır.</p>
 
 <h3>Sentry (çökme raporlama)</h3>
-<p>Uygulama beklenmedik şekilde kapandığında teknik bir rapor gönderilir. Bu raporlarda IP adresiniz, cihaz kimliğiniz ve kullanıcı bilgileriniz <strong>bilerek kapatılmıştır</strong>. Rapor içeriği gönderilmeden önce kişisel veri temizleme sürecinden geçirilir.</p>
+<p>Sentry yapılandırılmışsa ve kullanım verisi paylaşımı açıksa teknik hata raporları gönderilebilir. Gizlilik Ayarları üzerinden bu paylaşımı kapatabilirsiniz. Bu raporlarda IP adresiniz, cihaz kimliğiniz ve kullanıcı bilgileriniz <strong>bilerek kapatılmıştır</strong>. Rapor içeriği gönderilmeden önce kişisel veri temizleme sürecinden geçirilir.</p>
 
+<h3>OpenStreetMap ve Wikidata (cami ve kutsal mekânlar)</h3>
+<p>Cami ve kutsal mekân listesi OpenStreetMap (© OpenStreetMap katkıcıları, ODbL lisansı) ve Wikidata (CC0) verisinden hazırlanır ve uygulamayla gelir; uygulama bu hizmetlere çalışırken bağlanmaz. Yalnızca yurt dışında, cihazdaki listede yakında cami yoksa en yakın camiler OpenStreetMap Vakfı'nın Overpass hizmetinden alınır; sunucuya yalnızca yaklaşık 100 metreye yuvarlanmış konum gönderilir. Bu hizmetin kendi gizlilik politikası geçerlidir: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">wiki.osmfoundation.org/wiki/Privacy_Policy</a>. Kutsal mekân künyesindeki "Vikipedi'de oku" bağlantısı tarayıcınızda tr.wikipedia.org sayfasını açar; Wikimedia Vakfı'nın gizlilik politikası geçerlidir: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.</p>
+
+<h3>YouTube (Kâbe Canlı)</h3>
+<p>Mescid-i Haram ve Mescid-i Nebevi (Suudi Arabistan Yayın Kurumu), Diyanet TV ve Mescid-i Aksa (Kudüs Evkaf İdaresi) canlı yayınları, yayıncıların YouTube kanallarından, uygulamanın içinde YouTube oynatıcısıyla gösterilir. Yayını açtığınızda oynatıcı YouTube'a (Google) bağlanır ve Google'ın gizlilik politikası geçerlidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Diyanet Kur'an Radyo, Diyanet Radyo ve Diyanet Risalet Radyo, Diyanet'in yayın sunucusundan doğrudan dinlenir.</p>
+
+<h3>Telefonun adres hizmeti (Apple, Google)</h3>
+<p>Namaz vakitleri ve Ramazan için şehir adı, en yakın camilerin ve kutsal mekânların adresi telefonunuzun işletim sisteminin adres hizmetiyle bulunur: iOS'ta Apple, Android'de Google. Şehir için konumunuz, adres için caminin ya da kutsal mekânın konumu gönderilir; uygulama bu istekleri hesabınızla ilişkilendirmez. Apple'ın ve Google'ın gizlilik politikaları geçerlidir: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+<h3>Anlık bildirimler (Firebase Cloud Messaging)</h3>
+<p>Anlık bildirim altyapısı etkinse, izninizle cihazınızın bildirim belirteci Supabase'de hesabınıza bağlanır. Bildirimler Google Firebase Cloud Messaging (iOS'ta ayrıca Apple APNs) üzerinden iletilir. Belirteç bildirim teslimi için kullanılır; çıkış ve hesap silmede kaydı kaldırılır. Altyapı yapılandırılmamışsa bu özellik çalışmaz.</p>
 <h3>Google AdMob</h3>
-<p>Uygulama reklam gösterir. AdMob, reklam sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Google'ın veri işleme uygulamaları için <a href="https://policies.google.com/technologies/partner-sites">Google Gizlilik Politikası</a> geçerlidir. iOS'ta uygulama izleme izni istemediğimiz için size kişiselleştirilmemiş reklam gösterilir.</p>
+<p>Uygulama reklam gösterir. AdMob, reklam sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Google'ın veri işleme uygulamaları için <a href="https://policies.google.com/technologies/partner-sites">Google Gizlilik Politikası</a> geçerlidir. Reklam isteklerinden önce Google UMP üzerinden gerekli gizlilik tercihleri denetlenir. Bölgenizde gerekiyorsa onay formu gösterilir. Profil → Gizlilik Ayarları → Reklam gizlilik tercihleri üzerinden kararınızı değiştirebilirsiniz; bu seçenek Google tarafından gerekli görülen bölgelerde görünür.</p>
 
 <h2>4. Çocuklar</h2>
 <p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan veri toplamayız. Çocuğunuza ait bir veri işlediğimizi düşünüyorsanız bize yazın, silelim.</p>
 
-<h2>5. Saklama ve silme</h2>
+<h2 id="hesap-silme">5. Saklama ve silme</h2>
 <p>Verileriniz hesabınız açık kaldığı sürece saklanır.</p>
 <p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın kayıtlarınız, merasimleriniz ve topluluk paylaşımlarınız sunucudan kaldırılır. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
-<p>Uygulama içinden silemiyorsanız aşağıdaki adrese yazın, talebinizi en geç 30 gün içinde sonuçlandırırız.</p>
+<p>Uygulamayı kurmadan da <a href="./hesap-silme.html">hesap ve veri silme talebi</a> gönderebilirsiniz. Hesabınızın e-posta adresinden dinimerasimler@gmail.com adresine “Dini Merasim hesap silme” konusuyla yazın; şifre göndermeyin. Hesap sahipliği doğrulandıktan sonra talebinizi en geç 30 gün içinde sonuçlandırırız.</p>
 
 <h2>6. Haklarınız</h2>
 <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında; verilerinize erişme, düzeltilmesini isteme, silinmesini isteme, işlenmesine itiraz etme ve verilerinizin bir kopyasını talep etme haklarına sahipsiniz. Bu haklarınızı kullanmak için aşağıdaki adrese yazabilirsiniz.</p>
