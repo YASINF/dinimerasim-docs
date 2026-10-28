@@ -97,10 +97,10 @@
 <header>
   <p class="eyebrow">Dini Merasim</p>
   <h1>Gizlilik Politikası</h1>
-  <p class="meta">Yürürlük tarihi: 27 Ekim 2026 (güncellendi) · Uygulama sürümü 2.29.4</p>
+  <p class="meta">Yürürlük tarihi: 28 Ekim 2026 (güncellendi) · Uygulama sürümü 2.29.4</p>
 </header>
 
-<p class="lede">Dini Merasim; vefat eden sevdiklerinizi anmanıza, doğum günlerini dua ve şükürle kutlamanıza, hayırlı günleriniz için merasim düzenlemenize ve yakınlarınızla birlikte Kur’an okuyup dua etmenize yardımcı olur. Zikir halkaları, namaz vakitleri ve hatırlatmalarla günlük ibadetlerinize eşlik eder. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
+<p class="lede">Dini Merasim; vefat eden sevdiklerinizi anmanıza, doğum günlerini dua ve şükürle kutlamanıza, hayırlı günleriniz için merasim düzenlemenize ve yakınlarınızla birlikte Kur’an okuyup dua etmenize yardımcı olur. Zikir halkaları, Akîka Takibi, İlahiler, namaz vakitleri ve hatırlatmalarla günlük ibadetlerinize eşlik eder. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
 
 <div class="card">
   <h3 style="margin-top:0">Kısa özet</h3>
@@ -108,6 +108,8 @@
     <li><strong>Konum kullanımını siz seçersiniz.</strong> Namaz vakti ve kıble hesabı cihazda yapılır. Şehrinizi bulmak için konumunuz telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) sorulur. "En yakın cami" ve "Yakındaki kutsal mekânlar" listeleri uygulamanın içindeki cami ve kutsal mekân listesinden cihazda hesaplanır; konumunuz gönderilmez. Yalnızca yurt dışında (cihazdaki listede 20 km içinde cami yoksa) 100 metreye yuvarlanmış konumunuz (Google Play tanımında kesin konum) çevredeki camileri bulmak için OpenStreetMap sunucusuna gider. Adresler için camilerin ve kutsal mekânların konumu telefonunuzun adres hizmetine gönderilir.</li>
     <li><strong>Fotoğraflar:</strong> Yakın kayıtları için seçtiğiniz fotoğraflar cihazda kalır. Ortak Kurban’da düzenleyenin seçtiği hayvan fotoğrafı özel Supabase deposuna yüklenir; yalnız organizasyon sahibi, başvuranlar ve kabul edilmiş ortaklar görebilir.</li>
     <li><strong>Adres ve konum:</strong> Et payı teslimat adresini yalnız talep sahibi ve ilgili payı veren kişi görür. Kabir ziyareti için kaydettiğiniz konum Supabase’de özel saklanır ve yalnız ziyareti düzenleyen ile o ziyarete davet edilenlere gösterilir. Davetliler birbirlerinin kimlik ve yanıt bilgilerini göremez.</li>
+    <li><strong>Çocuk bilgisi:</strong> Akîka Takibi'ne eklediğiniz çocuğun adı, doğum tarihi ve akîka kaydı yalnız size açıktır. Akîkayı Keşfet'te paylaşırsanız onaylı takip bağlantılarınız 30 gün boyunca çocuğun adını, oğlu/kızı bilgisini ve akîka tarihini görür.</li>
+    <li><strong>İlahiler:</strong> Resmî YouTube kanallarından YouTube oynatıcısıyla çalınır; favorileriniz yalnız cihazınızda saklanır.</li>
     <li><strong>Hesabınızı uygulama içinden tamamen silebilirsiniz.</strong></li>
     <li>Verilerinizi reklam amacıyla satmıyoruz.</li>
   </ul>
@@ -146,6 +148,26 @@
       <td>Supabase’de yalnız ziyaret sahibi ve davet edilen hesaplar; harita veya paylaşım uygulamasına yalnız kullanıcı ilgili düğmeye basarsa aktarılır.</td>
     </tr>
     <tr>
+      <td>Profil: ad, ülke (zorunlu), il, ilçe ve isteğe bağlı profil fotoğrafı</td>
+      <td>Namaz vakitleri ve kandil tarihleri; profiliniz açıksa adınız, fotoğrafınız ve iliniz takip ağınızdaki kişilere "Kişi önerileri"nde ve kişi aramasında gösterilir</td>
+      <td>Supabase + cihazda kopya; profili gizlerseniz önerilmez ve aranmazsınız</td>
+    </tr>
+    <tr>
+      <td>Akîka kaydı: çocuk (yakın kaydı), durum, akîka tarihi ve yeri, isim ve sadaka işaretleri</td>
+      <td>Akîkayı takip etmek; doğumdan birkaç gün sonra hatırlatma</td>
+      <td>Supabase; yalnız kaydı oluşturan kişi görür. Hatırlatma cihazda kurulur.</td>
+    </tr>
+    <tr>
+      <td>Keşfet'te ilahi ve akîka paylaşımları, tepkiler</td>
+      <td>Onaylı takip bağlantılarınızla paylaşmak; akîkada çocuğun adı, oğlu/kızı bilgisi ve akîka tarihi gösterilir, adınız yalnız siz seçerseniz</td>
+      <td>Supabase; 30 gün akışta görünür, engellediğiniz kişiler görmez. İstediğiniz an kaldırabilirsiniz.</td>
+    </tr>
+    <tr>
+      <td>Favori ilahiler</td>
+      <td>Favoriler listesini göstermek</td>
+      <td><span class="tag">Yalnızca cihazda</span></td>
+    </tr>
+    <tr>
       <td>Topluluk paylaşımları, dua ve zikir halkası kayıtları, tepkiler</td>
       <td>Topluluk özellikleri</td>
       <td>Supabase</td>
@@ -181,7 +203,7 @@
       <td>Supabase özel depolama alanı; organizasyon sahibi, başvuranlar ve kabul edilmiş ortaklar erişebilir</td>
     </tr>
     <tr>
-      <td>Et payı yardımı teslimat adresi ve isteğe bağlı koordinatlar</td>
+      <td>Et payı yardımı (Ortak Kurban ya da akîka eti) teslimat adresi ve isteğe bağlı koordinatlar</td>
       <td>Talep edilen et payının teslim edilmesi</td>
       <td>Supabase; yalnız talep sahibi ve ilgili payı veren kişi görebilir. Harita uygulamasına ancak kullanıcı yol tarifi seçerse aktarılır.</td>
     </tr>
@@ -230,6 +252,9 @@
 <h3>Et payı teslimat adresi</h3>
 <p>Et payı yardımı talep ederseniz şehir, ilçe ve teslimat adresini kendiniz girersiniz; koordinat eklemek isteğe bağlıdır. Adres yalnızca ilgili payı veren kişiye ve size gösterilir, topluluk akışında yayımlanmaz. Uygulama adresi otomatik olarak Google'a veya başka bir harita sağlayıcısına göndermez. Siz harita/yol tarifi bağlantısını açarsanız adres ya da varsa koordinatlar seçtiğiniz harita uygulamasına aktarılır; o sağlayıcının gizlilik koşulları geçerlidir. Teslimat adresi Google Play Veri Güvenliği beyanında adres ve kesin konum bilgisi olarak açıklanır.</p>
 
+<h3>Akîka ve çocuk bilgisi</h3>
+<p>Akîka Takibi'ne bir çocuk eklediğinizde çocuğun adı, cinsiyeti ve doğum tarihi yakın kaydı olarak; akîka durumu, tarihi, yeri ve isim/sadaka işaretleri akîka kaydı olarak Supabase'de saklanır ve yalnız size gösterilir. Akîkayı Keşfet'te paylaşırsanız onaylı takip bağlantılarınız 30 gün boyunca çocuğun adını, oğlu/kızı bilgisini ve akîka tarihini görür ve tepki verebilir; adınız yalnız "İsmim görünsün" derseniz gösterilir. Akîka "planlandı"ya geri alınırsa paylaşım kalkar. Akîka etinden pay ayırırsanız teslimat talepleri yukarıdaki et payı kurallarıyla işlenir. Çocuk kaydını sildiğinizde akîka kaydı, paylaşımı ve et payı talepleri de silinir.</p>
+
 <h3>Merasimler, davetler ve canlı katılım</h3>
 <p>Merasimler yalnız davetlilere açıktır. Fiziksel merasimde yazdığınız il, ilçe ve açık adres yalnız merasimi düzenleyene ve davetlilere gösterilir; çevrim içi merasimde konum istenmez. Davetlinin yanıtı ve katılamadığında yerine önerdiği kişi düzenleyene gösterilir; önerilen kişi yalnız düzenleyen onaylarsa davet edilir. Canlı yayına katıldığınızda katılma zamanınız ve süreniz Supabase'de kaydedilir ve yalnız düzenleyen görür. Biten bir merasimi Keşfet'te paylaşırsanız seçtiğiniz kitle (herkes ya da yalnız davetliler) merasimin adını, türünü, tarihini ve il/ilçesini görür; açık adres ve davetli listesi paylaşılmaz, adınızın görünmesi sizin seçiminizdir.</p>
 
@@ -262,8 +287,8 @@
 <h3>OpenStreetMap ve Wikidata (cami ve kutsal mekânlar)</h3>
 <p>Cami ve kutsal mekân listesi OpenStreetMap (© OpenStreetMap katkıcıları, ODbL lisansı) ve Wikidata (CC0) verisinden hazırlanır ve uygulamayla gelir; uygulama bu hizmetlere çalışırken bağlanmaz. Yalnızca yurt dışında, cihazdaki listede yakında cami yoksa en yakın camiler OpenStreetMap Vakfı'nın Overpass hizmetinden alınır; sunucuya yalnızca yaklaşık 100 metreye yuvarlanmış konum gönderilir. Bu hizmetin kendi gizlilik politikası geçerlidir: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">wiki.osmfoundation.org/wiki/Privacy_Policy</a>. Kutsal mekân künyesindeki "Vikipedi'de oku" bağlantısı tarayıcınızda tr.wikipedia.org sayfasını açar; Wikimedia Vakfı'nın gizlilik politikası geçerlidir: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.</p>
 
-<h3>YouTube (Kâbe Canlı)</h3>
-<p>Mescid-i Haram ve Mescid-i Nebevi (Suudi Arabistan Yayın Kurumu), Diyanet TV ve Mescid-i Aksa (Kudüs Evkaf İdaresi) canlı yayınları, yayıncıların YouTube kanallarından, uygulamanın içinde YouTube oynatıcısıyla gösterilir. Yayını açtığınızda oynatıcı YouTube'a (Google) bağlanır ve Google'ın gizlilik politikası geçerlidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Diyanet Kur'an Radyo, Diyanet Radyo ve Diyanet Risalet Radyo, Diyanet'in yayın sunucusundan doğrudan dinlenir.</p>
+<h3>YouTube (Kâbe Canlı ve İlahiler)</h3>
+<p>İlahiler, sanatçıların ve yapımcıların resmî YouTube kanallarından uygulamanın içindeki YouTube oynatıcısıyla çalınır; oynatıcı açılınca YouTube'a (Google) bağlanılır ve YouTube kendi reklamlarını gösterebilir. Hangi ilahileri favorilediğiniz yalnız cihazınızda tutulur. Mescid-i Haram ve Mescid-i Nebevi (Suudi Arabistan Yayın Kurumu), Diyanet TV ve Mescid-i Aksa (Kudüs Evkaf İdaresi) canlı yayınları, yayıncıların YouTube kanallarından, uygulamanın içinde YouTube oynatıcısıyla gösterilir. Yayını açtığınızda oynatıcı YouTube'a (Google) bağlanır ve Google'ın gizlilik politikası geçerlidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Diyanet Kur'an Radyo, Diyanet Radyo ve Diyanet Risalet Radyo, Diyanet'in yayın sunucusundan doğrudan dinlenir.</p>
 
 <h3>Telefonun adres hizmeti (Apple, Google)</h3>
 <p>Namaz vakitleri ve Ramazan için şehir adı, en yakın camilerin ve kutsal mekânların adresi telefonunuzun işletim sisteminin adres hizmetiyle bulunur: iOS'ta Apple, Android'de Google. Şehir için konumunuz, adres için caminin ya da kutsal mekânın konumu gönderilir; uygulama bu istekleri hesabınızla ilişkilendirmez. Apple'ın ve Google'ın gizlilik politikaları geçerlidir: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
@@ -276,11 +301,11 @@
 <p>Uygulama reklam gösterir. AdMob, reklam sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Google'ın veri işleme uygulamaları için <a href="https://policies.google.com/technologies/partner-sites">Google Gizlilik Politikası</a> geçerlidir. Reklam isteklerinden önce Google UMP üzerinden gerekli gizlilik tercihleri denetlenir. Bölgenizde gerekiyorsa onay formu gösterilir. Profil → Gizlilik Ayarları → Reklam gizlilik tercihleri üzerinden kararınızı değiştirebilirsiniz; bu seçenek Google tarafından gerekli görülen bölgelerde görünür.</p>
 
 <h2>4. Çocuklar</h2>
-<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan veri toplamayız. Çocuğunuza ait bir veri işlediğimizi düşünüyorsanız bize yazın, silelim.</p>
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan hesap açtırmayız. Velisi olduğunuz bir çocuğu yakın kaydı ya da Akîka Takibi olarak siz ekleyebilirsiniz; bu bilgileri yalnız siz görürsünüz, paylaşmak sizin seçiminizdir. Çocuğunuza ait bir veriyi silmek isterseniz kaydı uygulamadan silebilir ya da bize yazabilirsiniz.</p>
 
 <h2 id="hesap-silme">5. Saklama ve silme</h2>
 <p>Verileriniz hesabınız açık kaldığı sürece saklanır.</p>
-<p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın kayıtlarınız, merasimleriniz ve topluluk paylaşımlarınız sunucudan kaldırılır. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
+<p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın ve akîka kayıtlarınız, merasimleriniz ve topluluk paylaşımlarınız sunucudan kaldırılır. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
 <p>Uygulamayı kurmadan da <a href="./hesap-silme.html">hesap ve veri silme talebi</a> gönderebilirsiniz. Hesabınızın e-posta adresinden dinimerasimler@gmail.com adresine “Dini Merasim hesap silme” konusuyla yazın; şifre göndermeyin. Hesap sahipliği doğrulandıktan sonra talebinizi en geç 30 gün içinde sonuçlandırırız.</p>
 
 <h2>6. Haklarınız</h2>
