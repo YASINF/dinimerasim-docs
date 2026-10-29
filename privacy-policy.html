@@ -97,7 +97,7 @@
 <header>
   <p class="eyebrow">Dini Merasim</p>
   <h1>Gizlilik Politikası</h1>
-  <p class="meta">Yürürlük tarihi: 28 Ekim 2026 (güncellendi) · Uygulama sürümü 2.30.0</p>
+  <p class="meta">Yürürlük tarihi: 29 Ekim 2026 (güncellendi) · Uygulama sürümü 2.30.0</p>
 </header>
 
 <p class="lede">Dini Merasim; vefat eden sevdiklerinizi anmanıza, doğum günlerini dua ve şükürle kutlamanıza, hayırlı günleriniz için merasim düzenlemenize ve yakınlarınızla birlikte Kur’an okuyup dua etmenize yardımcı olur. Zikir halkaları, Akîka Takibi, İlahiler, namaz vakitleri ve hatırlatmalarla günlük ibadetlerinize eşlik eder. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
@@ -110,6 +110,7 @@
     <li><strong>Adres ve konum:</strong> Et payı teslimat adresini yalnız talep sahibi ve ilgili payı veren kişi görür. Kabir ziyareti için kaydettiğiniz konum Supabase’de özel saklanır ve yalnız ziyareti düzenleyen ile o ziyarete davet edilenlere gösterilir. Davetliler birbirlerinin kimlik ve yanıt bilgilerini göremez.</li>
     <li><strong>Çocuk bilgisi:</strong> Akîka Takibi'ne eklediğiniz çocuğun adı, doğum tarihi ve akîka kaydı yalnız size açıktır. Akîkayı Keşfet'te paylaşırsanız onaylı takip bağlantılarınız 30 gün boyunca çocuğun adını, oğlu/kızı bilgisini ve akîka tarihini görür.</li>
     <li><strong>İlahiler:</strong> Resmî YouTube kanallarından YouTube oynatıcısıyla çalınır; favorileriniz yalnız cihazınızda saklanır.</li>
+    <li><strong>Dini Filmler:</strong> Diyanet ve TRT'nin resmî YouTube kanallarından aynı oynatıcıyla çalınır; bir filmde kaldığınız yer yalnız cihazınızda saklanır.</li>
     <li><strong>Hesabınızı uygulama içinden tamamen silebilirsiniz.</strong></li>
     <li>Verilerinizi reklam amacıyla satmıyoruz.</li>
   </ul>
@@ -158,13 +159,18 @@
       <td>Supabase; yalnız kaydı oluşturan kişi görür. Hatırlatma cihazda kurulur.</td>
     </tr>
     <tr>
-      <td>Keşfet'te ilahi ve akîka paylaşımları, tepkiler</td>
+      <td>Keşfet'te ilahi, dini film ve akîka paylaşımları, tepkiler</td>
       <td>Onaylı takip bağlantılarınızla paylaşmak; akîkada çocuğun adı, oğlu/kızı bilgisi ve akîka tarihi gösterilir, adınız yalnız siz seçerseniz</td>
       <td>Supabase; 30 gün akışta görünür, engellediğiniz kişiler görmez. İstediğiniz an kaldırabilirsiniz.</td>
     </tr>
     <tr>
       <td>Favori ilahiler</td>
       <td>Favoriler listesini göstermek</td>
+      <td><span class="tag">Yalnızca cihazda</span></td>
+    </tr>
+    <tr>
+      <td>Dini Filmler'de kaldığınız yer (saniye)</td>
+      <td>Filmi kaldığınız yerden sürdürmek</td>
       <td><span class="tag">Yalnızca cihazda</span></td>
     </tr>
     <tr>
@@ -290,8 +296,8 @@
 <h3>OpenStreetMap ve Wikidata (cami ve kutsal mekânlar)</h3>
 <p>Cami ve kutsal mekân listesi OpenStreetMap (© OpenStreetMap katkıcıları, ODbL lisansı) ve Wikidata (CC0) verisinden hazırlanır ve uygulamayla gelir; uygulama bu hizmetlere çalışırken bağlanmaz. Yalnızca yurt dışında, cihazdaki listede yakında cami yoksa en yakın camiler OpenStreetMap Vakfı'nın Overpass hizmetinden alınır; sunucuya yalnızca yaklaşık 100 metreye yuvarlanmış konum gönderilir. Bu hizmetin kendi gizlilik politikası geçerlidir: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy">wiki.osmfoundation.org/wiki/Privacy_Policy</a>. Kutsal mekân künyesindeki "Vikipedi'de oku" bağlantısı tarayıcınızda tr.wikipedia.org sayfasını açar; Wikimedia Vakfı'nın gizlilik politikası geçerlidir: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.</p>
 
-<h3>YouTube (Kâbe Canlı ve İlahiler)</h3>
-<p>İlahiler, sanatçıların ve yapımcıların resmî YouTube kanallarından uygulamanın içindeki YouTube oynatıcısıyla çalınır; oynatıcı açılınca YouTube'a (Google) bağlanılır ve YouTube kendi reklamlarını gösterebilir. Hangi ilahileri favorilediğiniz yalnız cihazınızda tutulur. Mescid-i Haram ve Mescid-i Nebevi (Suudi Arabistan Yayın Kurumu), Diyanet TV ve Mescid-i Aksa (Kudüs Evkaf İdaresi) canlı yayınları, yayıncıların YouTube kanallarından, uygulamanın içinde YouTube oynatıcısıyla gösterilir. Yayını açtığınızda oynatıcı YouTube'a (Google) bağlanır ve Google'ın gizlilik politikası geçerlidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Diyanet Kur'an Radyo, Diyanet Radyo ve Diyanet Risalet Radyo, Diyanet'in yayın sunucusundan doğrudan dinlenir.</p>
+<h3>YouTube (Kâbe Canlı, İlahiler ve Dini Filmler)</h3>
+<p>İlahiler, sanatçıların ve yapımcıların resmî YouTube kanallarından uygulamanın içindeki YouTube oynatıcısıyla çalınır; oynatıcı açılınca YouTube'a (Google) bağlanılır ve YouTube kendi reklamlarını gösterebilir. Hangi ilahileri favorilediğiniz yalnız cihazınızda tutulur. Dini Filmler, Diyanet İşleri Başkanlığı (Diyanet TV, Diyanet Çocuk) ile TRT'nin (TRT Belgesel, TRT Çocuk, TRT Diyanet Çocuk) resmî YouTube kanallarından aynı oynatıcıyla çalınır; bir filmde kaldığınız saniye yalnız cihazınızda tutulur. Mescid-i Haram ve Mescid-i Nebevi (Suudi Arabistan Yayın Kurumu), Diyanet TV ve Mescid-i Aksa (Kudüs Evkaf İdaresi) canlı yayınları, yayıncıların YouTube kanallarından, uygulamanın içinde YouTube oynatıcısıyla gösterilir. Yayını açtığınızda oynatıcı YouTube'a (Google) bağlanır ve Google'ın gizlilik politikası geçerlidir: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>. Diyanet Kur'an Radyo, Diyanet Radyo ve Diyanet Risalet Radyo, Diyanet'in yayın sunucusundan doğrudan dinlenir.</p>
 
 <h3>Telefonun adres hizmeti (Apple, Google)</h3>
 <p>Namaz vakitleri ve Ramazan için şehir adı, en yakın camilerin ve kutsal mekânların adresi telefonunuzun işletim sisteminin adres hizmetiyle bulunur: iOS'ta Apple, Android'de Google. Şehir için konumunuz, adres için caminin ya da kutsal mekânın konumu gönderilir; uygulama bu istekleri hesabınızla ilişkilendirmez. Apple'ın ve Google'ın gizlilik politikaları geçerlidir: <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a>, <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
