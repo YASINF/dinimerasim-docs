@@ -97,7 +97,7 @@
 <header>
   <p class="eyebrow">Dini Merasim</p>
   <h1>Gizlilik Politikası</h1>
-  <p class="meta">Yürürlük tarihi: 29 Ekim 2026 (güncellendi) · Uygulama sürümü 2.30.0</p>
+  <p class="meta">Yürürlük tarihi: 31 Ekim 2026 (güncellendi) · Uygulama sürümü 2.32.0</p>
 </header>
 
 <p class="lede">Dini Merasim; vefat eden sevdiklerinizi anmanıza, doğum günlerini dua ve şükürle kutlamanıza, hayırlı günleriniz için merasim düzenlemenize ve yakınlarınızla birlikte Kur’an okuyup dua etmenize yardımcı olur. Zikir halkaları, Akîka Takibi, İlahiler, namaz vakitleri ve hatırlatmalarla günlük ibadetlerinize eşlik eder. Bu sayfa, uygulamanın hangi verileri işlediğini, nerede sakladığını ve nasıl silebileceğinizi anlatır.</p>
@@ -107,7 +107,7 @@
   <ul>
     <li><strong>Konum kullanımını siz seçersiniz.</strong> Namaz vakti ve kıble hesabı cihazda yapılır. Şehrinizi bulmak için konumunuz telefonunuzun adres hizmetine (iOS'ta Apple, Android'de Google) sorulur. "En yakın cami" ve "Yakındaki kutsal mekânlar" listeleri uygulamanın içindeki cami ve kutsal mekân listesinden cihazda hesaplanır; konumunuz gönderilmez. Yalnızca yurt dışında (cihazdaki listede 20 km içinde cami yoksa) 100 metreye yuvarlanmış konumunuz (Google Play tanımında kesin konum) çevredeki camileri bulmak için OpenStreetMap sunucusuna gider. Adresler için camilerin ve kutsal mekânların konumu telefonunuzun adres hizmetine gönderilir.</li>
     <li><strong>Fotoğraflar:</strong> Yakın kayıtları için seçtiğiniz fotoğraflar cihazda kalır. Ortak Kurban’da düzenleyenin seçtiği hayvan fotoğrafı özel Supabase deposuna yüklenir; yalnız organizasyon sahibi, başvuranlar ve kabul edilmiş ortaklar görebilir.</li>
-    <li><strong>Adres ve konum:</strong> Et payı teslimat adresini yalnız talep sahibi ve ilgili payı veren kişi görür. Kabir ziyareti için kaydettiğiniz konum Supabase’de özel saklanır ve yalnız ziyareti düzenleyen ile o ziyarete davet edilenlere gösterilir. Davetliler birbirlerinin kimlik ve yanıt bilgilerini göremez.</li>
+    <li><strong>Adres ve konum:</strong> Et payı teslimat adresini yalnız talep sahibi ve ilgili payı veren kişi görür. Kabir ziyareti için kaydettiğiniz konum Supabase’de özel saklanır ve yalnız ziyareti düzenleyen ile o ziyarete davet edilenlere gösterilir. Davetliler birbirlerinin yanıt bilgilerini göremez; canlı ziyarette yalnız o an bağlı olanların adları birbirine görünür.</li>
     <li><strong>Çocuk bilgisi:</strong> Akîka Takibi'ne eklediğiniz çocuğun adı, doğum tarihi ve akîka kaydı yalnız size açıktır. Akîkayı Keşfet'te paylaşırsanız onaylı takip bağlantılarınız 30 gün boyunca çocuğun adını, oğlu/kızı bilgisini ve akîka tarihini görür.</li>
     <li><strong>İlahiler:</strong> Resmî YouTube kanallarından YouTube oynatıcısıyla çalınır; favorileriniz yalnız cihazınızda saklanır.</li>
     <li><strong>Dini Filmler:</strong> Diyanet ve TRT'nin resmî YouTube kanallarından aynı oynatıcıyla çalınır; bir filmde kaldığınız yer yalnız cihazınızda saklanır.</li>
@@ -141,7 +141,7 @@
       <td>Supabase + cihazda kopya</td>
     </tr>
     <tr>
-      <td>Kabir ziyareti: seçilen vefat etmiş yakın, ziyaret zamanı, isteğe bağlı sure listesi, davetliler ve yanıt durumları</td>
+      <td>Kabir ziyareti: seçilen vefat etmiş yakın, ziyaret zamanı, isteğe bağlı sure listesi ve dua seçimi, davetliler ve yanıt durumları; canlı ziyarette okuma konumu, katılımcının son görülme zamanı ve hazır mesaj/emoji kayıtları (bir gün sonra silinir)</td>
       <td>Ziyareti planlamak, davetleri ve okuma programını göstermek</td>
       <td>Supabase; yalnız ziyaret sahibi ve o ziyarete davet edilen hesaplar. Katılımcı listesi ve yanıtlar yalnız ziyaret sahibine; davetli yalnız kendi yanıtına açıktır.</td>
     </tr>
@@ -280,7 +280,7 @@
 <p>Kur'an okuyucuda sonuna kadar dinlediğiniz sure, daha sonra bağlantısız dinleyebilmeniz için cihazınızın uygulama dizinine kaydedilir; sunucuya gönderilmez. Seçtiğiniz okuyucu da cihazda saklanır.</p>
 
 <h3>Kabir ziyareti konumu</h3>
-<p>Kabir adresi, il/ilçe ve isteğe bağlı koordinatlar ilgili yakınınızın ziyaretiyle Supabase’de saklanır. Ziyareti oluşturan kişi ile daveti bekleyen veya katılımı kabul eden kişiler ziyaret kaydını ve konumunu görebilir; daveti reddeden kullanıcı erişimini kaybeder. Ziyaret sahibi davetlilerin yanıt durumlarını görür; her davetli yalnızca kendi yanıtını görür. Adres veya koordinat, siz “Git” düğmesini açtığınızda harita uygulamasına ya da “Adresi paylaş” düğmesini seçtiğinizde telefonunuzun paylaşım ekranında seçtiğiniz alıcıya aktarılır. Bu dış hizmetlerin kendi gizlilik politikaları geçerlidir. Hesabınızı silince ziyaret kayıtları ve kabir konumlarınız da silinir. Kabir adresi Google Play Veri Güvenliği beyanında adres; koordinat ise kesin konum olarak açıklanmalıdır.</p>
+<p>Kabir adresi, il/ilçe ve isteğe bağlı koordinatlar ilgili yakınınızın ziyaretiyle Supabase’de saklanır. Ziyareti oluşturan kişi ile daveti bekleyen veya katılımı kabul eden kişiler ziyaret kaydını ve konumunu görebilir; daveti reddeden kullanıcı erişimini kaybeder. Ziyaret sahibi davetlilerin yanıt durumlarını görür; her davetli yalnızca kendi yanıtını görür. Davetliler ziyaret edilen yakının adını görür (duadaki anlam satırında da yer alır). Düzenleyen “Ziyareti başlat” deyince daveti bekleyen ve kabul edenlere bildirim gider; daveti kabul edenler canlıya katılıp okumayı izleyebilir. Canlıdayken son görülme zamanınız kaydedilir ve o an bağlı olanların (düzenleyen dahil) adları birbirine gösterilir. Gönderdiğiniz hazır mesaj ve emojiler (serbest metin yoktur) adınızla katılanlara gösterilir ve bir gün sonra silinir. Adres veya koordinat, siz “Git” düğmesini açtığınızda harita uygulamasına ya da “Adresi paylaş” düğmesini seçtiğinizde telefonunuzun paylaşım ekranında seçtiğiniz alıcıya aktarılır. Bu dış hizmetlerin kendi gizlilik politikaları geçerlidir. Hesabınızı silince ziyaret kayıtları ve kabir konumlarınız da silinir. Kabir adresi Google Play Veri Güvenliği beyanında adres; koordinat ise kesin konum olarak açıklanmalıdır.</p>
 
 <h2>3. Üçüncü taraf hizmetler</h2>
 
@@ -297,7 +297,7 @@
 <p>Sentry yapılandırılmışsa ve kullanım verisi paylaşımı açıksa teknik hata raporları gönderilebilir. Gizlilik Ayarları üzerinden bu paylaşımı kapatabilirsiniz. Bu raporlarda IP adresiniz, cihaz kimliğiniz ve kullanıcı bilgileriniz <strong>bilerek kapatılmıştır</strong>. Rapor içeriği gönderilmeden önce kişisel veri temizleme sürecinden geçirilir.</p>
 
 <h3>OpenStreetMap harita döşemeleri (kabir konumu seçimi)</h3>
-<p>Kabir konumunu haritadan seçerseniz harita döşemeleri OpenStreetMap sunucularından (tile.openstreetmap.org) yüklenir; bu sırada IP adresiniz ve görüntülediğiniz bölge bu sunuculara iletilir. Seçtiğiniz noktanın adresi telefonunuzun adres hizmetiyle bulunur. Harita verisi © OpenStreetMap katkıcıları, ODbL lisansı.</p>
+<p>Kabir konumunu haritadan seçerseniz harita döşemeleri OpenStreetMap sunucularından (tile.openstreetmap.org) yüklenir; bu sırada IP adresiniz ve görüntülediğiniz bölge bu sunuculara iletilir. Seçtiğiniz noktanın adresi ve haritada aradığınız yer adı (ör. mezarlık adı, seçili ilçe ve ille birlikte) telefonunuzun adres hizmetiyle (iOS'ta Apple, Android'de Google) bulunur. Harita verisi © OpenStreetMap katkıcıları, ODbL lisansı.</p>
 
 <h3>Kur'an ses sunucuları (Quran.com, islamic.network)</h3>
 <p>Kur'an tilavetleri ve Namaz Hocası'ndaki bazı âyet okumaları Quran.com ve islamic.network ses sunucularından çalınır; bu sırada IP adresiniz bu sunuculara iletilir. Hesap bilgileriniz gönderilmez.</p>
