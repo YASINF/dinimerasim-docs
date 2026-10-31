@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#052C23">
+<title>Kabir ziyareti daveti · Dini Merasim</title>
+<link rel="icon" href="dm-logo.png">
+<style>
+/* Renkler DESIGN.md: koyu selvi yeşili, mat yüzey, ölçülü altın. */
+:root{--zemin:#052C23;--yuzey:#0A362D;--altin:#D8B56A;--altin-koyu:#B3954F;--metin:#fff;--soluk:#9FAEA8;--cizgi:#346256}
+*{box-sizing:border-box}
+body{margin:0;background:var(--zemin);color:var(--metin);font:17px/1.6 Poppins,system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:560px;margin:0 auto;padding:32px 20px 48px}
+.marka{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.marka img{width:52px;height:52px;border-radius:14px}
+.marka span{font:600 24px/1.2 "Source Serif 4",Georgia,serif}
+h1{font:600 34px/1.2 "Source Serif 4",Georgia,serif;margin:0 0 6px}
+.cizgi{width:40px;height:3px;background:var(--altin);border-radius:2px;margin:12px 0 20px}
+h2{font:600 22px/1.3 "Source Serif 4",Georgia,serif;margin:0 0 8px}
+p{margin:0 0 14px;color:rgba(255,255,255,.85)}
+.kart{background:var(--yuzey);border:1px solid var(--cizgi);border-radius:20px;padding:22px;margin:0 0 18px}
+.etiket{font-size:12px;letter-spacing:.12em;color:var(--soluk);text-transform:uppercase}
+.kod{font:700 34px/1.2 Poppins,system-ui,sans-serif;letter-spacing:6px;color:var(--altin);margin:6px 0 18px;word-break:break-all}
+/* Uygulamadaki dolu düğme: altın degrade ve İslami motif (dugme_deseni.dart). */
+.dugme{display:flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:12px 22px;border-radius:999px;
+  text-decoration:none;font-weight:600;font-size:17px;color:var(--zemin);
+  background:url(dm-motif.png) center/160px repeat,linear-gradient(90deg,var(--altin),var(--altin-koyu),var(--altin));
+  background-blend-mode:soft-light,normal}
+.dugme:active{filter:brightness(.92)}
+.magazalar{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.magazalar .dugme{font-size:15px;padding:10px 12px}
+.magazalar svg{width:20px;height:20px;flex:none}
+ol{margin:0 0 4px;padding-left:22px;color:rgba(255,255,255,.85)}
+li{margin-bottom:6px}
+b{color:var(--altin);font-weight:600}
+footer{margin-top:28px;font-size:14px;color:var(--soluk)}
+footer a{color:var(--altin)}
+@media (max-width:360px){.magazalar{grid-template-columns:1fr}.kod{font-size:28px}}
+</style></head>
+<body><main>
+<!-- Kabir ziyareti davet bağlantısı (uygulama SIRA 81). Kod yalnız sayfada
+     gösterilir; bu sayfa sunucuya hiçbir şey göndermez. -->
+<div class="marka"><img src="dm-logo.png" alt=""><span>Dini Merasim</span></div>
+<h1>Kabir ziyareti daveti</h1>
+<div class="cizgi"></div>
+
+<section class="kart" id="davet">
+  <p>Birlikte kabir ziyaretine davet edildin.</p>
+  <div class="etiket">Davet kodun</div>
+  <div class="kod" id="kod"></div>
+  <a class="dugme" id="uygulama" href="#">Uygulamada aç</a>
+</section>
+
+<section class="kart" id="yok" hidden>
+  <p>Bu bağlantıda geçerli bir davet kodu yok. Daveti gönderen kişiden bağlantıyı yeniden isteyebilirsin.</p>
+</section>
+
+<section class="kart">
+  <h2>Uygulama açılmazsa</h2>
+  <ol>
+    <li>Dini Merasim'i kur ve giriş yap.</li>
+    <li><b>Kabir Ziyareti → Davet koduyla katıl</b> bölümüne davet kodunu yaz.</li>
+  </ol>
+</section>
+
+<div class="magazalar">
+  <a class="dugme" href="https://play.google.com/store/apps/details?id=com.dinimerasim">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.8 0-1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>Google Play</a>
+  <a class="dugme" href="https://apps.apple.com/app/id6827951222">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8 1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.5-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1 .1 2.1-.6 2.8-1.4z"/></svg>App Store</a>
+</div>
+
+<footer><a href="privacy-policy.html">Gizlilik politikası</a> · <a href="index.html">Dini Merasim</a></footer>
+</main>
+<script>
+(function () {
+  var k = (new URLSearchParams(location.search).get('k') || '').toUpperCase().replace(/[^A-Z0-9]/g, '');
+  if (!/^[A-HJ-NP-Z2-9]{8}$/.test(k)) {
+    document.getElementById('davet').hidden = true;
+    document.getElementById('yok').hidden = false;
+    return;
+  }
+  document.getElementById('kod').textContent = k;
+  document.getElementById('uygulama').href = 'dinimerasim://app/kabir-katil?k=' + k;
+})();
+</script>
+</body></html>
