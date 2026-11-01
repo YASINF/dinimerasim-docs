@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#052C23">
+<title>Dini Merasim · Tanıtım</title>
+<meta name="description" content="Dini Merasim: sevdiklerinizle birlikte anma, dua ve ibadet. Test sürümünü deneyin.">
+<meta property="og:title" content="Dini Merasim · Test sürümü tanıtımı">
+<meta property="og:description" content="Merasim düzenleyin, birlikte Kur'an okuyun, kandil ve bayramları sevdiklerinizle anın.">
+<meta property="og:image" content="tanitim/e14_kutsal_gunler.jpg">
+<link rel="icon" href="dm-logo.png">
+<style>
+/* Renkler DESIGN.md: koyu selvi yeşili, mat yüzey, ölçülü altın (kabir.html ile aynı). */
+:root{--zemin:#052C23;--yuzey:#0A362D;--altin:#D8B56A;--altin-koyu:#B3954F;--metin:#fff;--soluk:#9FAEA8;--cizgi:#346256}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--zemin);color:var(--metin);font:16px/1.55 Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+.ust{position:fixed;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;gap:10px;padding:max(12px,env(safe-area-inset-top)) 16px 10px;background:linear-gradient(var(--zemin) 70%,transparent)}
+.ust img{width:34px;height:34px;border-radius:9px}
+.ust b{font:600 18px/1 "Source Serif 4",Georgia,serif}
+.ust span{margin-left:auto;font-size:13px;color:var(--soluk)}
+.slaytlar{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slaytlar::-webkit-scrollbar{display:none}
+.slayt{flex:0 0 100%;height:100%;scroll-snap-align:center;overflow-y:auto;padding:66px 20px 100px;display:flex;justify-content:center}
+.ic{width:100%;max-width:880px;display:flex;flex-direction:column;align-items:center;gap:16px}
+@media (min-width:760px){.ic{flex-direction:row;align-items:center;gap:44px}.ic.tek{flex-direction:column}}
+.metin{flex:1;min-width:0}
+.etiket{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soluk);margin-bottom:6px}
+.yeni{color:var(--zemin);background:var(--altin);border-radius:999px;padding:2px 10px;letter-spacing:.06em;margin-left:6px}
+h1{font:600 34px/1.15 "Source Serif 4",Georgia,serif;margin:0 0 8px}
+h2{font:600 26px/1.2 "Source Serif 4",Georgia,serif;margin:0 0 6px}
+.cizgi{width:40px;height:3px;background:var(--altin);border-radius:2px;margin:8px 0 12px}
+p{margin:0 0 12px;color:rgba(255,255,255,.86)}
+ul{margin:0;padding-left:20px;color:rgba(255,255,255,.86)}
+li{margin-bottom:6px;font-size:15px}
+li::marker{color:var(--altin)}
+.telefonlar{display:flex;gap:12px;justify-content:center;flex:0 0 auto}
+.telefon{width:min(44vw,180px,22vh);border-radius:22px;border:5px solid #12352d;box-shadow:0 18px 40px rgba(0,0,0,.45);background:#000;overflow:hidden}
+.telefonlar.iki .telefon{width:min(38vw,150px,18vh)}
+@media (min-width:760px){.telefon{width:260px;border-radius:28px;border-width:6px}.telefonlar.iki .telefon{width:210px}}
+.telefon img{display:block;width:100%;height:auto}
+.kart{background:var(--yuzey);border:1px solid var(--cizgi);border-radius:18px;padding:18px;margin:0 0 14px}
+.kart h3{margin:0 0 6px;font:600 18px/1.3 "Source Serif 4",Georgia,serif;color:var(--altin)}
+.dugme{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;color:var(--zemin);
+  background:url(dm-motif.png) center/160px repeat,linear-gradient(90deg,var(--altin),var(--altin-koyu),var(--altin));background-blend-mode:soft-light,normal;margin-top:10px}
+.amac{display:grid;grid-template-columns:1fr;gap:12px;width:100%}
+@media (min-width:640px){.amac{grid-template-columns:1fr 1fr}}
+.amac div{background:var(--yuzey);border:1px solid var(--cizgi);border-radius:16px;padding:14px 16px}
+.amac b{display:block;color:var(--altin);margin-bottom:2px}
+.kapak{text-align:center;align-items:center}
+.kapak img.logo{width:96px;height:96px;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.kapak .cizgi{margin:14px auto 18px}
+.ipucu{font-size:13px;color:var(--soluk);margin-top:14px}
+.alt{position:fixed;inset:auto 0 0 0;z-index:3;display:flex;align-items:center;justify-content:center;gap:16px;padding:12px 16px max(14px,env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--zemin) 35%)}
+.ok{width:44px;height:44px;border-radius:50%;border:1px solid var(--cizgi);background:var(--yuzey);color:var(--altin);font-size:20px;cursor:pointer}
+.ok:disabled{opacity:.35}
+.noktalar{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:60vw}
+.noktalar button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--cizgi);cursor:pointer}
+.noktalar button[aria-current="true"]{background:var(--altin);width:20px;border-radius:4px}
+@media (prefers-reduced-motion:no-preference){.slaytlar{scroll-behavior:smooth}}
+</style></head>
+<body>
+<div class="ust"><img src="dm-logo.png" alt=""><b>Dini Merasim</b><span id="sayac">1 / 15</span></div>
+
+<main class="slaytlar" id="slaytlar" aria-roledescription="slayt gösterisi">
+
+<section class="slayt" aria-label="Kapak"><div class="ic tek kapak">
+  <img class="logo" src="dm-logo.png" alt="Dini Merasim logosu">
+  <div>
+    <h1>Dini Merasim</h1>
+    <div class="cizgi"></div>
+    <p>Sevdiklerinizle birlikte anma, dua ve ibadet için tek uygulama.</p>
+    <p>Yeni sürümü yayından önce denemeniz için sizi test grubuna davet ediyoruz.</p>
+    <p class="ipucu">Kaydırın →</p>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Uygulamanın amacı"><div class="ic tek">
+  <div class="metin" style="width:100%">
+    <span class="etiket">Amaç</span>
+    <h2>Neden Dini Merasim?</h2>
+    <div class="cizgi"></div>
+    <div class="amac">
+      <div><b>Anmak</b>Vefat eden yakınlarınız için mevlüt, 7'si, 40'ı, 52'si ve yıl dönümü merasimleri; kabir ziyareti.</div>
+      <div><b>Sevinçleri paylaşmak</b>Doğum günü ve evlilik yıl dönümünde dua ve şükür meclisi; bebek mevlidi, yeni ev, yeni araba, askere uğurlama, akîka.</div>
+      <div><b>Birlikte okumak</b>Uzaktaki sevdiklerinizle aynı anda Kur'an okuyun, dua edin; canlı merasim, zikir halkası, salavat anma.</div>
+      <div><b>Hatırlamak</b>Namaz vakitleri, kandil ve bayramlar, doğum günleri ve yıl dönümleri için zamanında hatırlatma.</div>
+      <div><b>Öğrenmek</b>Namaz hocası, dini bilgiler, dualar ve zikirler; Diyanet kaynaklı içerik.</div>
+      <div><b>Yakında ve yanında</b>En yakın cami, kutsal mekânlar, nöbetçi eczane, sağlık kuruluşları, kıble ve Kâbe Canlı.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="İslami Rehber"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e01_islami_rehber.jpg" alt="İslami Rehber ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Ana sayfa</span>
+    <h2>İslami Rehber</h2>
+    <div class="cizgi"></div>
+    <p>Uygulamanın kapısı: her şey tek ekranda.</p>
+    <ul><li>Kur'an-ı Kerim, Namaz Hocası, Dini Bilgiler, Kabir Ziyareti, Zikir Halkası</li>
+      <li>Namaz vakitleri, kıble, en yakın cami, yakındaki kutsal mekânlar</li>
+      <li>Kâbe Canlı, ilahiler, dini filmler, Ortak Kurban, Akîka</li>
+      <li>Kaza namazı ve oruç takibi; Sağlık Köşesi: eczane ve sağlık kuruluşu</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Keşfet"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e02_kesfet.jpg" alt="Keşfet akışı ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Akış</span>
+    <h2>Keşfet</h2>
+    <div class="cizgi"></div>
+    <p>Günün ayeti ve hadisi, Cuma mesajları, bayram tebrikleri, Ramazan'da imsakiye.</p>
+    <ul><li>Maşallah isteği, salavat anma, Gönül Perdesi, Huzur Kapısı, Rahmet Kapısı</li>
+      <li>Paylaşılan merasim, ilahi, film ve akîkalara tepki verin</li>
+      <li>Bildirime dokununca ilgili paylaşım açılır ve vurgulanır</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Kutsal Gün ve Geceler"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e14_kutsal_gunler.jpg" alt="Kutsal Gün ve Geceler bölümü" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Keşfet <span class="yeni">YENİ</span></span>
+    <h2>Kutsal Gün ve Geceler</h2>
+    <div class="cizgi"></div>
+    <p>Kandiller, bayramlar, arefe, Aşure, Hicrî yılbaşı, Ramazan ve Üç Aylar; Diyanet takviminden, geri sayımla.</p>
+    <ul><li>“Merasim planla”: güne özel program, akşam 18:00 seçili; dilediğiniz gibi değiştirin</li>
+      <li>Merasimi tamamlayınca Keşfet'te paylaşın, isterseniz adınız gizli</li>
+      <li>Merasime 2 gün kala akşam bir öneri bildirimi</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Merasimler"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e04_merasimler.jpg" alt="Merasimler ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Merasim</span>
+    <h2>Merasim düzenleyin</h2>
+    <div class="cizgi"></div>
+    <p>Mevlüt, yıl dönümü, 7'si, 40'ı, 52'si, kandil, hatim duası ve özel programlar.</p>
+    <ul><li>Program akışını sure, mevlid bahri, kaside ve dualarla kurun</li>
+      <li>Davetliler canlı merasime katılır; ayet ayet takip, büyük yazı</li>
+      <li>Merasim yalnız sizin ve davet ettiklerinizin</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Doğum günü ve sevinçler"><div class="ic tek">
+  <div class="metin" style="width:100%;max-width:640px">
+    <span class="etiket">Hayattakiler</span>
+    <h2>Sevdiklerinizi hatırlayın</h2>
+    <div class="cizgi"></div>
+    <p>Dini Merasim yalnız anma için değil; hayattaki sevdiklerinizin güzel günleri için de.</p>
+    <div class="kart"><h3>Doğum günü</h3>
+      <p>Dua ve şükür meclisi: Âyetü'l-Kürsî, İnşirah, kaside ve hayırlı ömür duası. 3 gün önce ve günü sabah hatırlatma; ana sayfada yaklaşan doğum günleri.</p></div>
+    <div class="kart"><h3>Dua kartı ve davet</h3>
+      <p>Kişinin adı, ayet ve duayla görüntü olarak paylaşın. Yakınınızın kaydını hesabına bağlayın; onaylarsa kendisi için kurulan meclisi görür ve katılır.</p></div>
+    <div class="kart"><h3>Evlilik yıl dönümü ve özel programlar</h3>
+      <p>Yıl dönümüne bir ay kala hatırlatma. Bebek mevlidi, yeni gelin, yeni ev, yeni araba, askere uğurlama ve akîka şükür meclisi.</p></div>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Kur'an-ı Kerim"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e07_kuran_okuyucu.jpg" alt="Kur'an okuyucu ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Okuma</span>
+    <h2>Kur'an-ı Kerim</h2>
+    <div class="cizgi"></div>
+    <ul><li>Arapça metin ve Diyanet meali yan yana</li>
+      <li>Hafız sesiyle dinleyin, okunan kelime işaretlenir</li>
+      <li>Kaldığınız yerden devam; sevdiklerinizle birlikte okuma</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Namaz"><div class="ic">
+  <div class="telefonlar iki">
+    <div class="telefon"><img src="tanitim/e05_namaz_vakitleri.jpg" alt="Namaz vakitleri ekranı" loading="lazy"></div>
+    <div class="telefon"><img src="tanitim/e08_namaz_hocasi.jpg" alt="Namaz hocası ekranı" loading="lazy"></div>
+  </div>
+  <div class="metin">
+    <span class="etiket">Namaz</span>
+    <h2>Vakitler ve Namaz Hocası</h2>
+    <div class="cizgi"></div>
+    <ul><li>Türkiye ve yurt dışı için Diyanet vakitleri, vakit hatırlatması</li>
+      <li>Kıble yönü; kaza namazı ve orucu takibi</li>
+      <li>Adım adım namaz öğrenme</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Zikir Halkası"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e09_zikir_halkasi.jpg" alt="Zikir halkası ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Birlikte</span>
+    <h2>Zikir Halkası</h2>
+    <div class="cizgi"></div>
+    <p>Bir yakınınızın ruhuna ya da bir niyet için halka kurun.</p>
+    <ul><li>Yâsin, hatim, İhlâs, salavat, istiğfar ya da kendi zikriniz</li>
+      <li>Takip ettiklerinizi davet edin, pay önerilir</li>
+      <li>Okunan herkes için anlık güncellenir</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Kabir Ziyareti"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e13_kabir_ziyareti.jpg" alt="Kabir ziyareti ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Ziyaret <span class="yeni">YENİ</span></span>
+    <h2>Kabir Ziyareti</h2>
+    <div class="cizgi"></div>
+    <ul><li>Kabir konumunu haritada kaydedin, ziyareti planlayın</li>
+      <li>Okuyan hocayı seçin; davetliler canlı katılıp okumayı birlikte izler</li>
+      <li>WhatsApp bağlantısıyla davet; ziyaret duası merhumun adıyla</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Ortak Kurban ve Akîka"><div class="ic">
+  <div class="telefonlar iki">
+    <div class="telefon"><img src="tanitim/e10_ortak_kurban.jpg" alt="Ortak Kurban ekranı" loading="lazy"></div>
+    <div class="telefon"><img src="tanitim/e12_akika.jpg" alt="Akîka takibi ekranı" loading="lazy"></div>
+  </div>
+  <div class="metin">
+    <span class="etiket">Kurban</span>
+    <h2>Ortak Kurban ve Akîka</h2>
+    <div class="cizgi"></div>
+    <ul><li>Büyükbaş kurbanda en çok 7 hisse; başvuru, kesim ve pay teslimi takibi</li>
+      <li>Çocuklarınız için akîkayı planlayın ve kaydedin</li>
+      <li>Uygulama para toplamaz, ödeme almaz</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="İlahiler"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e11_ilahiler.jpg" alt="İlahiler ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Dinle</span>
+    <h2>İlahiler</h2>
+    <div class="cizgi"></div>
+    <ul><li>Seçme ilahiler, resmî kanallardan</li>
+      <li>Beğendiğinizi Keşfet'te paylaşın</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Tüm özellikler"><div class="ic tek">
+  <div class="metin" style="width:100%">
+    <span class="etiket">Hepsi bir arada</span>
+    <h2>Tüm özellikler</h2>
+    <div class="cizgi"></div>
+    <div class="amac">
+      <div><b>Merasim</b>Mevlüt, 7'si, 40'ı, 52'si, yıl dönümü, kandil, hatim duası, özel programlar; canlı yayın, davetliler, katılım raporu.</div>
+      <div><b>Kutsal günler</b>Kandil, bayram, arefe, Aşure, Hicrî yılbaşı, Ramazan ve Üç Aylar; geri sayım, hazır program, öneri bildirimi.</div>
+      <div><b>Sevinçler</b>Doğum günü ve evlilik yıl dönümü meclisi, dua kartı, özel programlar, akîka takibi.</div>
+      <div><b>Birlikte ibadet</b>Zikir halkası, salavat anma, birlikte Kur'an okuma, kabir ziyaretine canlı katılım.</div>
+      <div><b>Kur'an ve bilgi</b>Kur'an-ı Kerim (meal, ses, kelime takibi), Namaz Hocası, Dini Bilgiler, dualar ve zikirler.</div>
+      <div><b>Namaz</b>Türkiye ve yurt dışı vakitleri, ezan ve vakit hatırlatması, Cuma selası, kıble, kaza namazı ve oruç takibi.</div>
+      <div><b>Keşfet</b>Günün ayeti ve hadisi, Cuma mesajı, bayram tebriği, Maşallah isteği, Gönül Perdesi, Huzur ve Rahmet Kapısı.</div>
+      <div><b>Ramazan</b>İmsakiye, günün menüsü, fitre ve zekât hesaplama.</div>
+      <div><b>Kurban</b>Ortak Kurban (en çok 7 hisse), kesim ve pay takibi, et yardımı talepleri; para toplanmaz.</div>
+      <div><b>Yakında</b>En yakın cami, yakındaki kutsal mekânlar, nöbetçi eczane, sağlık kuruluşları, Kâbe Canlı ve Kur'an radyosu.</div>
+      <div><b>Dinle ve izle</b>İlahiler ve dini filmler (Diyanet ve TRT yapımları); beğendiğinizi paylaşın.</div>
+      <div><b>Kişiler ve gizlilik</b>Yakınlarım, kişi takibi, sevap raporu; profil açık ya da gizli, hesap silme. Türkçe, İngilizce, Arapça.</div>
+    </div>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Teste katılın"><div class="ic tek">
+  <div class="metin" style="width:100%;max-width:560px">
+    <span class="etiket">Test grubu</span>
+    <h2>Teste katılın</h2>
+    <div class="cizgi"></div>
+    <div class="kart"><h3>Android</h3>
+      <p>Google hesabınız test listesine eklendikten sonra bu bağlantıdan katılın, ardından Google Play'den yükleyin.</p>
+      <a class="dugme" href="https://play.google.com/apps/testing/com.dinimerasim">Android testine katıl</a></div>
+    <div class="kart"><h3>iPhone</h3>
+      <p>E-posta adresinizi gruba yazın. TestFlight davetini alınca TestFlight uygulamasından yükleyin.</p>
+      <a class="dugme" href="https://apps.apple.com/app/testflight/id899247664">TestFlight'ı indir</a></div>
+    <div class="kart"><h3>Geri bildirim</h3>
+      <p>Bir sorun görürseniz ekran görüntüsüyle gruba yazın; iPhone'da TestFlight'tan da gönderebilirsiniz. Teşekkür ederiz.</p></div>
+  </div>
+</div></section>
+
+</main>
+
+<nav class="alt" aria-label="Slaytlar">
+  <button class="ok" id="geri" aria-label="Önceki">‹</button>
+  <div class="noktalar" id="noktalar"></div>
+  <button class="ok" id="ileri" aria-label="Sonraki">›</button>
+</nav>
+
+<script>
+(function () {
+  var kap = document.getElementById('slaytlar');
+  var slaytlar = kap.querySelectorAll('.slayt');
+  var noktalar = document.getElementById('noktalar');
+  var sayac = document.getElementById('sayac');
+  var geri = document.getElementById('geri'), ileri = document.getElementById('ileri');
+  var acik = 0;
+  slaytlar.forEach(function (s, i) {
+    var b = document.createElement('button');
+    b.setAttribute('aria-label', (i + 1) + '. slayt: ' + s.getAttribute('aria-label'));
+    b.onclick = function () { git(i); };
+    noktalar.appendChild(b);
+  });
+  function git(i) { kap.scrollTo({ left: i * kap.clientWidth }); }
+  function guncelle() {
+    acik = kap.clientWidth ? Math.round(kap.scrollLeft / kap.clientWidth) : 0;
+    sayac.textContent = (acik + 1) + ' / ' + slaytlar.length;
+    noktalar.querySelectorAll('button').forEach(function (b, i) {
+      b.setAttribute('aria-current', i === acik ? 'true' : 'false');
+    });
+    geri.disabled = acik === 0;
+    ileri.disabled = acik === slaytlar.length - 1;
+  }
+  kap.addEventListener('scroll', function () { window.requestAnimationFrame(guncelle); });
+  geri.onclick = function () { git(Math.max(0, acik - 1)); };
+  ileri.onclick = function () { git(Math.min(slaytlar.length - 1, acik + 1)); };
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') ileri.onclick();
+    if (e.key === 'ArrowLeft') geri.onclick();
+  });
+  guncelle();
+})();
+</script>
+</body></html>
