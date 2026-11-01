@@ -19,8 +19,10 @@ body{margin:0;background:var(--zemin);color:var(--metin);font:16px/1.55 Poppins,
 .ust span{margin-left:auto;font-size:13px;color:var(--soluk)}
 .slaytlar{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
 .slaytlar::-webkit-scrollbar{display:none}
-.slayt{flex:0 0 100%;height:100%;scroll-snap-align:center;overflow-y:auto;padding:66px 20px 100px;display:flex;justify-content:center}
-.ic{width:100%;max-width:880px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.slayt{flex:0 0 100%;height:100%;scroll-snap-align:center;overflow-y:auto;padding:66px 20px 100px;display:flex;flex-direction:column}
+/* Kendi boyunda kalır: uzun slayt (Tüm özellikler) sonuna dek kayar; kısa
+   slayt otomatik kenar boşluğuyla dikeyde ortalanır. */
+.ic{flex:0 0 auto;margin:auto;width:100%;max-width:880px;display:flex;flex-direction:column;align-items:center;gap:16px}
 @media (min-width:760px){.ic{flex-direction:row;align-items:center;gap:44px}.ic.tek{flex-direction:column}}
 .metin{flex:1;min-width:0}
 .etiket{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--soluk);margin-bottom:6px}
