@@ -54,13 +54,13 @@ li::marker{color:var(--altin)}
 .alt{position:fixed;inset:auto 0 0 0;z-index:3;display:flex;align-items:center;justify-content:center;gap:16px;padding:12px 16px max(14px,env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--zemin) 35%)}
 .ok{width:44px;height:44px;border-radius:50%;border:1px solid var(--cizgi);background:var(--yuzey);color:var(--altin);font-size:20px;cursor:pointer}
 .ok:disabled{opacity:.35}
-.noktalar{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:60vw}
-.noktalar button{width:8px;height:8px;border-radius:50%;border:0;padding:0;background:var(--cizgi);cursor:pointer}
-.noktalar button[aria-current="true"]{background:var(--altin);width:20px;border-radius:4px}
+.noktalar{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:64vw}
+.noktalar button{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:var(--cizgi);cursor:pointer}
+.noktalar button[aria-current="true"]{background:var(--altin);width:16px;border-radius:4px}
 @media (prefers-reduced-motion:no-preference){.slaytlar{scroll-behavior:smooth}}
 </style></head>
 <body>
-<div class="ust"><img src="dm-logo.png" alt=""><b>Dini Merasim</b><span id="sayac">1 / 15</span></div>
+<div class="ust"><img src="dm-logo.png" alt=""><b>Dini Merasim</b><span id="sayac">1 / 18</span></div>
 
 <main class="slaytlar" id="slaytlar" aria-roledescription="slayt gösterisi">
 
@@ -211,29 +211,56 @@ li::marker{color:var(--altin)}
   </div>
 </div></section>
 
-<section class="slayt" aria-label="Ortak Kurban ve Akîka"><div class="ic">
-  <div class="telefonlar iki">
-    <div class="telefon"><img src="tanitim/e10_ortak_kurban.jpg" alt="Ortak Kurban ekranı" loading="lazy"></div>
-    <div class="telefon"><img src="tanitim/e12_akika.jpg" alt="Akîka takibi ekranı" loading="lazy"></div>
-  </div>
+<section class="slayt" aria-label="En yakın cami"><div class="ic">
+  <div class="telefonlar iki"><div class="telefon"><img src="tanitim/e17_en_yakin_cami.jpg" alt="En yakın camiler listesi" loading="lazy"></div><div class="telefon"><img src="tanitim/e19_yol_tarifi.jpg" alt="Camiye yol tarifi" loading="lazy"></div></div>
   <div class="metin">
-    <span class="etiket">Kurban</span>
-    <h2>Ortak Kurban ve Akîka</h2>
+    <span class="etiket">Konum <span class="yeni">YENİ</span></span>
+    <h2>En yakın cami, tek dokunuşla yol</h2>
     <div class="cizgi"></div>
-    <ul><li>Büyükbaş kurbanda en çok 7 hisse; başvuru, kesim ve pay teslimi takibi</li>
-      <li>Çocuklarınız için akîkayı planlayın ve kaydedin</li>
-      <li>Uygulama para toplamaz, ödeme almaz</li></ul>
+    <p>Konumunuza göre en yakın camiler mesafesiyle; “Git” ile haritada yol tarifi açılır.</p>
+    <ul><li>Cami ya da mekân adıyla arama</li><li>Yürüyerek, arabayla ya da toplu taşımayla rota</li><li>Konum yalnız arama için kullanılır</li></ul>
   </div>
 </div></section>
 
-<section class="slayt" aria-label="İlahiler"><div class="ic">
-  <div class="telefonlar"><div class="telefon"><img src="tanitim/e11_ilahiler.jpg" alt="İlahiler ekranı" loading="lazy"></div></div>
+<section class="slayt" aria-label="Yakındaki kutsal mekânlar"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e18_kutsal_mekanlar.jpg" alt="Yakındaki kutsal mekânlar listesi" loading="lazy"></div></div>
   <div class="metin">
-    <span class="etiket">Dinle</span>
-    <h2>İlahiler</h2>
+    <span class="etiket">Ziyaret</span>
+    <h2>Yakındaki kutsal mekânlar</h2>
     <div class="cizgi"></div>
-    <ul><li>Seçme ilahiler, resmî kanallardan</li>
-      <li>Beğendiğinizi Keşfet'te paylaşın</li></ul>
+    <p>Türbe ve makamlar mesafesiyle, künyesiyle; “Git” ile yol tarifi.</p>
+    <ul><li>Konumunuza en yakın türbe ve makamlar</li><li>Künye: kim, ne zaman, kaynağıyla</li><li>Kabir ve türbe ziyaretini planlamak için</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Ortak Kurban"><div class="ic">
+  <div class="telefonlar iki"><div class="telefon"><img src="tanitim/e20_kurban_baslat.jpg" alt="Ortak Kurban organizasyon başlatma ekranı" loading="lazy"></div><div class="telefon"><img src="tanitim/e21_et_payi.jpg" alt="Et payı yardımlaşması ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Kurban</span>
+    <h2>Ortak Kurban ve et payı</h2>
+    <div class="cizgi"></div>
+    <p>Büyükbaş kurbanı hissedarlarınızla birlikte organize edin; etten ayrılan payı ihtiyacı olana ulaştırın.</p>
+    <ul><li>Organizasyonu başlatın: il, ilçe, mahalle ve ayrılma son tarihi; en çok 7 hisse</li><li>Başvuru, kesim, hayvan fotoğrafı ve pay teslimi tek yerde</li><li>Et payı yardımlaşması: arkadaşlarınızın açtığı paylara talep gönderin; adresiniz yalnız payı sunanla paylaşılır</li><li>Uygulama para toplamaz, ödeme almaz</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="Akîka"><div class="ic">
+  <div class="telefonlar"><div class="telefon"><img src="tanitim/e12_akika.jpg" alt="Akîka takibi ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Akîka</span>
+    <h2>Akîka takibi</h2>
+    <div class="cizgi"></div>
+    <ul><li>Yeni doğan için şükür kurbanını planlayın ve kaydedin</li><li>Din İşleri Yüksek Kurulu fetvası özetiyle</li><li>Dilerseniz Keşfet'te paylaşın, şükür meclisi düzenleyin</li></ul>
+  </div>
+</div></section>
+
+<section class="slayt" aria-label="İlahiler ve dini filmler"><div class="ic">
+  <div class="telefonlar iki"><div class="telefon"><img src="tanitim/e15_ilahi_calar.jpg" alt="İlahi çalarken ekran" loading="lazy"></div><div class="telefon"><img src="tanitim/e16_dini_filmler.jpg" alt="Dini filmler ekranı" loading="lazy"></div></div>
+  <div class="metin">
+    <span class="etiket">Dinle ve izle</span>
+    <h2>İlahiler ve dini filmler</h2>
+    <div class="cizgi"></div>
+    <ul><li>Seçme ilahiler resmî kanallardan, uygulama içinde videosuyla çalar</li><li>Favorilerinizi ayırın, sanatçıya göre süzün, çocuk ilahileri</li><li>Diyanet ve TRT yapımı belgeseller ve çocuk filmleri</li><li>Beğendiğinizi Keşfet'te paylaşın</li></ul>
   </div>
 </div></section>
 
