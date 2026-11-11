@@ -113,7 +113,7 @@
     <li><strong>Dini Filmler:</strong> Diyanet ve TRT'nin resmî YouTube kanallarından aynı oynatıcıyla çalınır; bir filmde kaldığınız yer yalnız cihazınızda saklanır.</li>
     <li><strong>Hesap açmadan kullanım:</strong> Giriş ekranındaki "Giriş yapmadan keşfet" ile hesap gerektirmeyen bölümler (Kur'an, namaz vakitleri, ilahiler, dini filmler, Sağlık Köşesi gibi) hesapsız açılır. Bu kullanımda hesap açılmaz, adınız ve e-postanız toplanmaz; tercihleriniz yalnız cihazınızda saklanır. Paylaşım, tepki, kişi arama ve davet giriş ister.</li>
     <li><strong>Sağlık Köşesi:</strong> En yakın eczane ve sağlık kuruluşları uygulamanın içindeki listeden cihazda bulunur; konumunuz bunun için gönderilmez, liste güncellemeleri konumsuz indirilir. Favorileriniz ve son yerleriniz yalnız cihazınızda saklanır. Nöbetçi eczaneler için e-Devlet (Sağlık Bakanlığı, TİTCK) sayfası tarayıcınızda açılır; uygulama sağlık bilginizi toplamaz.</li>
-    <li><strong>Derslik (Elif-Bâ, Kur'an kursu):</strong> Kademeli olarak açılır. Çocuğunuzun hesabı olmaz; yalnız adını ve yaş grubunu, açık rızanızla siz kaydedersiniz. Ödevler, teslimler ve ilerleme yalnız size açıktır; kursa katılırsanız hoca çalışma süresi ve ses kayıtları dışındakileri görür. İsteğe bağlı sesli teslim kaydını yalnız siz dinlersiniz, 30 gün sonra silinir. Çocuk modunda reklam yoktur.</li>
+    <li><strong>Derslik (Elif-Bâ, Kur'an kursu):</strong> Kademeli olarak açılır. Çocuğunuzun hesabı olmaz; yalnız adını ve yaş grubunu, açık rızanızla siz kaydedersiniz. Ödevler, teslimler ve ilerleme yalnız size açıktır; kursa katılırsanız hoca çalışma süresi dışındakileri görür. Derslik ses kaydetmez, mikrofon kullanmaz. Çocuk modunda reklam yoktur.</li>
     <li><strong>Hesabınızı uygulama içinden tamamen silebilirsiniz.</strong></li>
     <li>Verilerinizi reklam amacıyla satmıyoruz.</li>
   </ul>
@@ -172,7 +172,7 @@
       <td>Supabase; 30 gün akışta görünür, engellediğiniz kişiler görmez. İstediğiniz an kaldırabilirsiniz.</td>
     </tr>
     <tr>
-      <td>Derslik çocuk profili: ad ve yaş grubu; açık rıza kayıtları (konu, metin sürümü, zaman, geri alındıysa zamanı)</td>
+      <td>Derslik çocuk profili: ad ve yaş grubu; açık rıza kayıtları (konu, metin sürümü, zaman)</td>
       <td>Derslik'i velisi olduğunuz çocuk için kullanmak</td>
       <td>Supabase; yalnız veli. Çocuk bir kursa katılınca adı ve yaş grubu kursun hocasına gösterilir.</td>
     </tr>
@@ -185,11 +185,6 @@
       <td>Kur'an kursu: kurs adı, cami, tarihler, ders günleri, hocanın adı soyadı; yoklama, duyurular, davet kodu ve yanlış kod denemeleri (bir saat)</td>
       <td>Kursu düzenlemek, velileri davet etmek, devamı izlemek</td>
       <td>Supabase; hoca ve kursa katılan çocukların velileri (veli sınıftaki diğer çocukları görmez). Kurs bitişinden bir yıl sonra silinir.</td>
-    </tr>
-    <tr>
-      <td>Sesli teslim kaydı (en çok 1 dakika, ayrı rızayla)</td>
-      <td>Velinin çocuğunun okuyuşunu dinlemesi</td>
-      <td>Supabase Storage, özel depo; yalnız veli. Oluşturulmasından 30 gün sonra silinir; cihazdaki kopya yüklenince silinir.</td>
     </tr>
     <tr>
       <td>Çocuk modunun PIN'i ve açık olduğu bilgisi</td>
@@ -318,8 +313,8 @@
 <h3>Derslik (Elif-Bâ ve Kur'an kursu)</h3>
 <p><strong>Derslik bölümü uygulamada kademeli olarak açılır; açıldığında aşağıdaki kurallar geçerlidir.</strong> Çocuğunuzun hesabı olmaz: velisi olduğunuz çocuk için yalnız adını ve yaş grubunu kaydedersiniz. İlk çocuğu eklemeden önce aydınlatma metnini okur ve açık rıza verirsiniz; rızanın konusu, metin sürümü ve zamanı saklanır. Verdiğiniz ödevler, çocuğunuzun teslimleri (yıldız, çalışma süresi, teslim saati), ders ilerlemesi ve çıkartmaları hesabınıza bağlı olarak Supabase'de saklanır ve yalnız size açıktır. Teslim bildirimi size gider; çocuk modu açıkken bildirime dokunmak yetişkin ekranlarını açmaz.</p>
 <p><strong>Çocuk modu:</strong> Uygulama içi bir kilittir; telefonu kilitlemez. PIN'i yalnız cihazınızda saklanır. PIN'i unutursanız kimliğiniz telefonunuzun kendi kilidiyle (Face ID, parmak izi ya da cihaz şifresi) doğrulanır; uygulama yalnız "doğrulandı" yanıtını alır, biyometrik veriniz uygulamaya ya da sunucuya gelmez. Çocuk modunda reklam gösterilmez ve başka bölümler açılmaz.</p>
-<p><strong>Kur'an kursu:</strong> Bir hoca kurs açarsa kursun adı, camisi, tarihleri, ders günleri ve hocanın adı soyadı kaydedilir. Çocuğunuzu kursa katmak için ayrıca kurs aydınlatma metnine rıza verirsiniz. Hoca çocuğun adını, yaş grubunu, çalıştığı dersleri, yıldızlarını, ödev durumunu ve yoklamasını görür; çalışma süresini, ses kayıtlarını ve hesap bilgilerinizi göremez. Veliler sınıftaki diğer çocukları görmez. Hoca size duyuru ve devamsızlık bildirimi gönderebilir; çocuğunuzla yazışamaz. Davet kodunu yanlış deneme kayıtları kötüye kullanımı önlemek için bir saat tutulur. Çocuğunuzu kurstan çıkarınca ya da kurs bitişinden 30 gün sonra hocanın erişimi biter; kursun kayıtları bitişten bir yıl sonra silinir, çocuğunuzun ilerlemesi sizde kalır.</p>
-<p><strong>Sesli teslim:</strong> Ayrı bir rızayla açılır. Çocuğunuz okuma derslerini teslim ederken isterse okuyuşunu kaydeder (en çok 1 dakika). Kayıt hesabınıza bağlı özel bir depoda (Supabase Storage) saklanır; yalnız siz dinleyebilirsiniz, hoca ve başka kimse erişemez. Cihazdaki kopya yüklendikten sonra silinir. Her kayıt oluşturulmasından 30 gün sonra kendiliğinden silinir; sesli teslimi kapatınca bütün kayıtlar silinir. Mikrofon yalnız kayıt sırasında kullanılır; izin vermezseniz ödev sessiz teslim edilir.</p>
+<p><strong>Kur'an kursu:</strong> Bir hoca kurs açarsa kursun adı, camisi, tarihleri, ders günleri ve hocanın adı soyadı kaydedilir. Çocuğunuzu kursa katmak için ayrıca kurs aydınlatma metnine rıza verirsiniz. Hoca çocuğun adını, yaş grubunu, çalıştığı dersleri, yıldızlarını, ödev durumunu ve yoklamasını görür; çalışma süresini ve hesap bilgilerinizi göremez. Veliler sınıftaki diğer çocukları görmez. Hoca size duyuru ve devamsızlık bildirimi gönderebilir; çocuğunuzla yazışamaz. Davet kodunu yanlış deneme kayıtları kötüye kullanımı önlemek için bir saat tutulur. Çocuğunuzu kurstan çıkarınca ya da kurs bitişinden 30 gün sonra hocanın erişimi biter; kursun kayıtları bitişten bir yıl sonra silinir, çocuğunuzun ilerlemesi sizde kalır.</p>
+<p><strong>Ses:</strong> Derslik ses kaydetmez ve mikrofon kullanmaz. Harf ve hecelerin Arapça okunuşu uygulamanın içindeki seslerle çalınır; bunun için hiçbir yere veri gönderilmez.</p>
 
 <h3>Merasimler, davetler ve canlı katılım</h3>
 <p>Merasimler yalnız davetlilere açıktır. Fiziksel merasimde yazdığınız il, ilçe ve açık adres yalnız merasimi düzenleyene ve davetlilere gösterilir; çevrim içi merasimde konum istenmez. Davetlinin yanıtı ve katılamadığında yerine önerdiği kişi düzenleyene gösterilir; önerilen kişi yalnız düzenleyen onaylarsa davet edilir. Canlı yayına katıldığınızda katılma zamanınız ve süreniz Supabase'de kaydedilir ve yalnız düzenleyen görür. Biten bir merasimi Keşfet'te paylaşırsanız seçtiğiniz kitle (herkes ya da yalnız davetliler) merasimin adını, türünü, tarihini ve il/ilçesini görür; açık adres ve davetli listesi paylaşılmaz, adınızın görünmesi sizin seçiminizdir. Kandil, bayram ya da mübarek gün merasimini adınızla paylaşırsanız paylaşımı görebilen onaylı takipçilerinize adınızla bildirim gider; adınızı gizlerseniz bildirim gönderilmez. Düzenleyen merasimi iptal ederse ya da tarihini, saatini veya yerini değiştirirse davetlilere bildirim gider. Düzenleyen bir davet bağlantısı paylaşabilir; bağlantıyla katılan kişi o merasimin davetlisi olur ve düzenleyen adını görür; yanlış kod denemeleri bir saat tutulur. Canlı merasimde o an bağlı olanların adları düzenleyene ve katılımcılara görünür.</p>
@@ -376,11 +371,11 @@
 <p>Uygulama reklam gösterir. AdMob, reklam sunmak için cihazınızın reklam tanımlayıcısını kullanabilir. Google'ın veri işleme uygulamaları için <a href="https://policies.google.com/technologies/partner-sites">Google Gizlilik Politikası</a> geçerlidir. Reklam isteklerinden önce Google UMP üzerinden gerekli gizlilik tercihleri denetlenir. Bölgenizde gerekiyorsa onay formu gösterilir. Profil → Gizlilik Ayarları → Reklam gizlilik tercihleri üzerinden kararınızı değiştirebilirsiniz; bu seçenek Google tarafından gerekli görülen bölgelerde görünür.</p>
 
 <h2>4. Çocuklar</h2>
-<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan hesap açtırmayız. Velisi olduğunuz bir çocuğu yakın kaydı ya da Akîka Takibi olarak siz ekleyebilirsiniz; bu bilgileri yalnız siz görürsünüz, paylaşmak sizin seçiminizdir. Derslik'te çocuğunuz için yalnız adını ve yaş grubunu, açık rızanızla siz kaydedersiniz; çocuğun hesabı olmaz ve çocuk modunda reklam gösterilmez (ayrıntı yukarıda, "Derslik"). Çocuk profilini silince ödevleri, teslimleri, ilerlemesi ve ses kayıtları da silinir. Çocuğunuza ait bir veriyi silmek isterseniz kaydı uygulamadan silebilir ya da bize yazabilirsiniz.</p>
+<p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek bu yaş grubundan hesap açtırmayız. Velisi olduğunuz bir çocuğu yakın kaydı ya da Akîka Takibi olarak siz ekleyebilirsiniz; bu bilgileri yalnız siz görürsünüz, paylaşmak sizin seçiminizdir. Derslik'te çocuğunuz için yalnız adını ve yaş grubunu, açık rızanızla siz kaydedersiniz; çocuğun hesabı olmaz ve çocuk modunda reklam gösterilmez (ayrıntı yukarıda, "Derslik"). Çocuk profilini silince ödevleri, teslimleri ve ilerlemesi de silinir. Çocuğunuza ait bir veriyi silmek isterseniz kaydı uygulamadan silebilir ya da bize yazabilirsiniz.</p>
 
 <h2 id="hesap-silme">5. Saklama ve silme</h2>
 <p>Verileriniz hesabınız açık kaldığı sürece saklanır.</p>
-<p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın, akîka ve adak kayıtlarınız, merasimleriniz, topluluk paylaşımlarınız ve Derslik kayıtlarınız (çocuk profilleri, ödevler, teslimler, ilerleme, açtığınız kurslar) sunucudan kaldırılır; ses kayıtlarının dosyaları gece temizliğinde depodan silinir. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
+<p><strong>Hesabınızı silmek için:</strong> Uygulamada <em>Profil → Gizlilik Ayarları → Hesabımı Sil</em> adımlarını izleyin. Hesabınızla birlikte yakın, akîka ve adak kayıtlarınız, merasimleriniz, topluluk paylaşımlarınız ve Derslik kayıtlarınız (çocuk profilleri, ödevler, teslimler, ilerleme, açtığınız kurslar) sunucudan kaldırılır. Cihazdaki yerel kopyalar ve fotoğraflar, uygulamayı kaldırdığınızda silinir.</p>
 <p>Uygulamayı kurmadan da <a href="./hesap-silme.html">hesap ve veri silme talebi</a> gönderebilirsiniz. Hesabınızın e-posta adresinden dinimerasimler@gmail.com adresine “Dini Merasim hesap silme” konusuyla yazın; şifre göndermeyin. Hesap sahipliği doğrulandıktan sonra talebinizi en geç 30 gün içinde sonuçlandırırız.</p>
 
 <h2>6. Haklarınız</h2>
